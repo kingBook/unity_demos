@@ -1,0 +1,17 @@
+Library/
+**/Library/
+
+Temp/
+**Temp/
+
+.vs/
+**/.vs/
+
+obj/
+**/obj/
+
+*.csproj
+**/*.csproj
+
+*.sln
+**/*.sln
