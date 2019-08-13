@@ -25,7 +25,7 @@ public class LookToObject:MonoBehaviour{
         Vector3[] points=getBoundsCorners(boundsCenter,bounds.extents);
         //所有角点投射到平面
         Vector3 planeNormal=boundsCenter-_camera.transform.position;
-        worldToPanelPoints(points,points.Length,planeNormal);
+        worldPointsToPlane(points,points.Length,planeNormal);
         _points=points;
         //平面中心
         Vector3 planeCenter=Vector3.ProjectOnPlane(boundsCenter,planeNormal);
@@ -73,7 +73,7 @@ public class LookToObject:MonoBehaviour{
     /// <param name="pointCount">坐标点数量</param>
     /// <param name="planeNormal">平面法线</param>
     /// <returns></returns>
-    private Vector3[] worldToPanelPoints(Vector3[] points,int pointCount,Vector3 planeNormal){
+    private Vector3[] worldPointsToPlane(Vector3[] points,int pointCount,Vector3 planeNormal){
         for(int i=0;i<pointCount;i++){
             var vertex=points[i];
             points[i]=Vector3.ProjectOnPlane(vertex,planeNormal);
