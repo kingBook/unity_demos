@@ -37,4 +37,9 @@ public class Main:MonoBehaviour{
 	}
 	
 	
+	private void OnMouseDrag(){
+		Debug.Log("drag");
+	}
+	
+	
 }
