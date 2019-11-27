@@ -17,28 +17,21 @@ public class Main:MonoBehaviour{
 		string filePath=System.Environment.CurrentDirectory.Replace('\\','/');
 		filePath+="/ProjectSettings/Physics2DSettings.yaml";
 		
-		var input = new StreamReader(filePath, Encoding.UTF8);
-		var yaml = new YamlStream();
+		StreamReader input = new StreamReader(filePath, Encoding.UTF8);
+		YamlStream yaml = new YamlStream();
 		yaml.Load(input);
-		for(int i=0;i<yaml.Documents.Count;i++){
-			YamlDocument document=yaml.Documents[i];
-			
-			foreach (YamlNode yamlNode in document.AllNodes){
-				Debug.Log(yamlNode);
-			}
-		}
+
+		YamlNode rootNode=yaml.Documents[0].RootNode;
+		YamlNode firstNode=rootNode["Physics2DSettings"];
+
+		YamlNode gravity=firstNode["m_Gravity"];
+		Debug.Log(gravity);//{ { x, 0 }, { y, -9.81 } }
+		Debug.LogFormat("x:{0},y:{1}",gravity["x"],gravity["y"]);//x:0,y:-9.81
+
+		Debug.Log(firstNode["m_JobOptions"]);
 		
 		
-		/*var mapping=(YamlMappingNode)yaml.Documents[0].RootNode;
-		foreach (var entry in mapping.Children){
-			Debug.Log(((YamlScalarNode)entry.Key).Value);
-		}*/
 		
-	}
-	
-	
-	private void OnMouseDrag(){
-		Debug.Log("drag");
 	}
 	
 	
