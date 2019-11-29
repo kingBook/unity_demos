@@ -17,7 +17,6 @@ public class Test{
 		YamlStream yaml = new YamlStream();
 		yaml.Load(streamReader);
 		streamReader.Dispose();
-		streamReader.Close();
 		
 
 		YamlMappingNode rootNode=(YamlMappingNode)yaml.Documents[0].RootNode;
