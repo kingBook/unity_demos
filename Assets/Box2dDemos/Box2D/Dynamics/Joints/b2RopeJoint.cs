@@ -89,9 +89,9 @@ public class b2RopeJoint : b2Joint
 	/** @private */
 	public b2RopeJoint(b2RopeJointDef def):base(def){
 		
-		b2Mat22 tMat;
-		float tX;
-		float tY;
+		//b2Mat22 tMat;
+		//float tX;
+		//float tY;
 		m_localAnchor1.SetV(def.localAnchorA);
 		m_localAnchor2.SetV(def.localAnchorB);
 		

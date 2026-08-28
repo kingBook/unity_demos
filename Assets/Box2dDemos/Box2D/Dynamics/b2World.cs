@@ -627,7 +627,7 @@ public class b2World
 		
 		uint flags = m_debugDraw.GetFlags();
 		
-		int i;
+		//int i;
 		b2Body b;
 		b2Fixture f;
 		b2Shape s;

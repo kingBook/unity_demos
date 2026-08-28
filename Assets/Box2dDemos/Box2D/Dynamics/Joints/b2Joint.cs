@@ -35,7 +35,7 @@ public class b2Joint
 	/**
 	* Get the type of the concrete joint.
 	*/
-	public int GetType(){
+	new public int GetType(){
 		return m_type;
 	}
 	

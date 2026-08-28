@@ -480,7 +480,7 @@ public class b2RevoluteJoint : b2Joint
 		
 		// TODO_ERIN block solve with limit
 		
-		float oldLimitImpulse;
+		// float oldLimitImpulse;
 		float C;
 		
 		b2Mat22 tMat;

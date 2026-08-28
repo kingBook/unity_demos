@@ -124,9 +124,9 @@ public class b2PulleyJoint : b2Joint
 	/** @private */
 	public b2PulleyJoint(b2PulleyJointDef def):base(def){
 		
-		b2Mat22 tMat;
-		float tX;
-		float tY;
+		// b2Mat22 tMat;
+		// float tX;
+		// float tY;
 		
 		m_ground = m_bodyA.m_world.m_groundBody;
 		//m_groundAnchor1 = def->groundAnchorA - m_ground->m_xf.position;
@@ -445,8 +445,8 @@ public class b2PulleyJoint : b2Joint
 		float length2;
 		float C;
 		float impulse;
-		float oldImpulse;
-		float oldLimitPositionImpulse;
+		// float oldImpulse;
+		// float oldLimitPositionImpulse;
 		
 		float tX;
 		

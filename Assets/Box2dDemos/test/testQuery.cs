@@ -14,7 +14,7 @@ public class testQuery : BaseMain {
 		initBase (0,0);
 
 		b2Body body;
-		BodyGameObj bodyObj;
+		//BodyGameObj bodyObj;
 		for(int i=0;i<20;i++){
 			if((i&1)>0){ 
 				body=createBox (100.0f,100.0f,Random.Range(-100.0f,100.0f),Random.Range(0.0f,100.0f));

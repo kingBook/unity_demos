@@ -128,7 +128,7 @@ public class b2PrismaticJoint : b2Joint
 		b2Body bA = m_bodyA;
 		b2Body bB = m_bodyB;
 		
-		b2Mat22 tMat;
+		// b2Mat22 tMat;
 		
 		b2Vec2 p1 = bA.GetWorldPoint(m_localAnchor1);
 		b2Vec2 p2 = bB.GetWorldPoint(m_localAnchor2);
@@ -299,9 +299,9 @@ public class b2PrismaticJoint : b2Joint
 	/** @private */
 	public b2PrismaticJoint(b2PrismaticJointDef def):base(def){
 		
-		b2Mat22 tMat;
-		float tX;
-		float tY;
+		// b2Mat22 tMat;
+		// float tX;
+		// float tY;
 		
 		m_localAnchor1.SetV(def.localAnchorA);
 		m_localAnchor2.SetV(def.localAnchorB);
@@ -599,8 +599,8 @@ public class b2PrismaticJoint : b2Joint
 		//B2_NOT_USED(baumgarte);
 		
 		
-		float limitC;
-		float oldLimitImpulse;
+		// float limitC;
+		// float oldLimitImpulse;
 		
 		b2Body bA = m_bodyA;
 		b2Body bB = m_bodyB;

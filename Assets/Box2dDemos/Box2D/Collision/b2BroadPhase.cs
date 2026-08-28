@@ -320,7 +320,7 @@ public class b2BroadPhase : IBroadPhase
 		b2Bound bound;
 		b2Bound prevBound;
 		b2Bound nextBound;
-		uint nextProxyId;
+		//uint nextProxyId;
 		b2Proxy nextProxy;
 		
 		if (proxy == null)
@@ -682,10 +682,10 @@ public class b2BroadPhase : IBroadPhase
 	}
 
 	public void Validate(){
-		b2Pair pair;
-		b2Proxy proxy1;
-		b2Proxy proxy2;
-		bool overlap;
+		// b2Pair pair;
+		// b2Proxy proxy1;
+		// b2Proxy proxy2;
+		// bool overlap;
 		
 		for (int axis = 0; axis < 2; ++axis)
 		{

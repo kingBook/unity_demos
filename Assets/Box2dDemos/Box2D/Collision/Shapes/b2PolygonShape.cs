@@ -596,7 +596,7 @@ public class b2PolygonShape : b2Shape
 				//Completely dry
 				return 0;
 			}
-			break;
+			//break;
 			case 1:
 			if (intoIndex == -1)
 			{

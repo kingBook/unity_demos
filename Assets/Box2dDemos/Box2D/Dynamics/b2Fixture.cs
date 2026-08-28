@@ -38,7 +38,7 @@ public class b2Fixture
 	 * Get the type of the child shape. You can use this to down cast to the concrete shape.
 	 * @return the shape type.
 	 */
-	public int GetType()
+	new public int GetType()
 	{
 		return m_shape.GetType();
 	}

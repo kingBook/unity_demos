@@ -121,7 +121,7 @@ public class b2PairManager
 	public void Commit(Action<object,object> callback){
 		int i;
 		
-		int removeCount = 0;
+		//int removeCount = 0;
 		
 		for (i = 0; i < m_pairBufferCount; ++i)
 		{

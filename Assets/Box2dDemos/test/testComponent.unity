@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 1153b29ec99b36b47b0615184fef78b4, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 1153b29ec99b36b47b0615184fef78b4,
+    type: 2}
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
@@ -487,7 +488,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: {x: 0, y: 0}
-  list: []
+  list:
+  - name: tag
+    type: 0
+    value:
+      stringVal: Untagged
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 0}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 0
+  - name: ID
+    type: 4
+    value:
+      stringVal: 
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 640493282}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 1
+  - name: name
+    type: 0
+    value:
+      stringVal: polygon
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 0}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 2
 --- !u!1 &826010560
 GameObject:
   m_ObjectHideFlags: 0
@@ -603,7 +661,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: {x: 0, y: 0}
-  list: []
+  list:
+  - name: tag
+    type: 0
+    value:
+      stringVal: Untagged
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 0}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 0
+  - name: ID
+    type: 4
+    value:
+      stringVal: 
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 826010563}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 1
+  - name: name
+    type: 0
+    value:
+      stringVal: ground
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 0}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 2
 --- !u!1 &931683020
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +887,64 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   point: {x: 0, y: 0}
-  list: []
+  list:
+  - name: tag
+    type: 0
+    value:
+      stringVal: Untagged
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 0}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 0
+  - name: ID
+    type: 4
+    value:
+      stringVal: 
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 931683023}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 1
+  - name: name
+    type: 0
+    value:
+      stringVal: box
+      intVal: 0
+      floatVal: 0
+      boolVal: 0
+      b2BodyObjectVal: {fileID: 0}
+      b2Vec2Val:
+        x: 0
+        y: 0
+      editListB2Vec2Val: 0
+      listB2Vec2Val:
+      - x: 0
+        y: 0
+      - x: 1
+        y: 0
+      gameObjectVal: {fileID: 0}
+    listID: 2
 --- !u!1 &1143342441
 GameObject:
   m_ObjectHideFlags: 0

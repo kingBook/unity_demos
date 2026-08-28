@@ -179,7 +179,7 @@ public class b2Body
 		//b2Fixture** node = &m_fixtureList;
 		b2Fixture node = m_fixtureList;
 		b2Fixture ppF = null; // Fix pointer-pointer stuff
-		bool found = false;
+		//bool found = false;
 		while (node != null)
 		{
 			if (node == fixture)
@@ -189,7 +189,7 @@ public class b2Body
 				else
 					m_fixtureList = fixture.m_next;
 				//node = fixture.m_next;
-				found = true;
+				//found = true;
 				break;
 			}
 			
@@ -899,7 +899,7 @@ public class b2Body
 	 * Get the type of this body.
 	 * @return type enum as a uint
 	 */ 
-	public uint GetType()
+	new public uint GetType()
 	{
 		return m_type;
 	}

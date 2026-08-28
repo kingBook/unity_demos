@@ -549,12 +549,12 @@ public class b2Collision{
 		b2CircleShape circle, b2Transform xf2)
 	{
 		manifold.m_pointCount = 0;
-		b2ManifoldPoint tPoint;
+		//b2ManifoldPoint tPoint;
 		
 		float dX;
 		float dY;
-		float positionX;
-		float positionY;
+		//float positionX;
+		//float positionY;
 		
 		b2Vec2 tVec;
 		b2Mat22 tMat;
@@ -573,7 +573,7 @@ public class b2Collision{
 		float cLocalX = (dX * tMat.col1.x + dY * tMat.col1.y);
 		float cLocalY = (dX * tMat.col2.x + dY * tMat.col2.y);
 		
-		float dist;
+		// float dist;
 		
 		// Find the min separating edge.
 		int normalIndex = 0;

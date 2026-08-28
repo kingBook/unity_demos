@@ -47,8 +47,8 @@ public class b2ContactSolver
 		m_allocator = allocator;
 		
 		int i;
-		b2Vec2 tVec;
-		b2Mat22 tMat;
+		// b2Vec2 tVec;
+		// b2Mat22 tMat;
 		
 		m_constraintCount = contactCount;
 
@@ -263,9 +263,9 @@ public class b2ContactSolver
 	//~b2ContactSolver();
 
 	public void InitVelocityConstraints(b2TimeStep step){
-		b2Vec2 tVec;
-		b2Vec2 tVec2;
-		b2Mat22 tMat;
+		// b2Vec2 tVec;
+		// b2Vec2 tVec2;
+		// b2Mat22 tMat;
 		
 		// Warm start.
 		for (int i = 0; i < m_constraintCount; ++i)
@@ -285,7 +285,7 @@ public class b2ContactSolver
 			float tangentX = normalY;
 			float tangentY = -normalX;
 			
-			float tX;
+			// float tX;
 			
 			int j;
 			int tCount;
@@ -339,10 +339,10 @@ public class b2ContactSolver
 	public void SolveVelocityConstraints(){
 		int j;
 		b2ContactConstraintPoint ccp;
-		float rAX;
-		float rAY;
-		float rBX;
-		float rBY;
+		// float rAX;
+		// float rAY;
+		// float rBX;
+		// float rBY;
 		float dvX;
 		float dvY;
 		float vn;
@@ -360,7 +360,7 @@ public class b2ContactSolver
 		float P2Y;
 		
 		b2Mat22 tMat;
-		b2Vec2 tVec;
+		// b2Vec2 tVec;
 		
 		for (int i = 0; i < m_constraintCount; ++i)
 		{
@@ -384,7 +384,7 @@ public class b2ContactSolver
 			float tangentY = -normalX;
 			float friction = c.friction;
 			
-			float tX;
+			// float tX;
 			
 			//b2Settings.b2Assert(c.pointCount == 1 || c.pointCount == 2);
 			// Solve the tangent constraints
@@ -519,7 +519,7 @@ public class b2ContactSolver
 				bX -= tMat.col1.x * aX + tMat.col2.x * aY;
 				bY -= tMat.col1.y * aX + tMat.col2.y * aY;
 				
-				float k_errorTol  = 0.001f;
+				// float k_errorTol  = 0.001f;
 				while(true)
 				{
 					//
