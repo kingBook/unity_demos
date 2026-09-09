@@ -3,6 +3,7 @@ using System.Collections;
 using Box2D.Dynamics;
 
 public class BodyGameObj : MonoBehaviour {
+    
 	public b2Body body;
 
 	void Start () {

@@ -207,7 +207,7 @@ public class ExportB2WorldEditor:Editor {
 		gameObjElement.SetAttribute("name",gameObject.name);
 		gameObjElement.SetAttribute("tag",gameObject.tag);
 		gameObjElement.SetAttribute("activeSelf",gameObject.activeSelf.ToString());
-		gameObjElement.SetAttribute("instanceID",gameObject.GetInstanceID().ToString());
+		gameObjElement.SetAttribute("instanceID",gameObject.GetEntityId().ToString());
 		//解析所有组件
         Component[] compoents=gameObject.GetComponents<Component>();
         for(int i=0;i<compoents.Length;i++)createComponentElement(compoents[i],gameObjElement,xml);
@@ -226,7 +226,7 @@ public class ExportB2WorldEditor:Editor {
 		XmlElement componentElement=xml.CreateElement("Component");
 		componentElement.SetAttribute("name",component.GetType().Name);//组件类名
 		componentElement.SetAttribute("nameSpace",component.GetType().Namespace);//组件类所在的命名空间
-		componentElement.SetAttribute("instanceID",component.GetInstanceID().ToString());
+		componentElement.SetAttribute("instanceID",component.GetEntityId().ToString());
 		//解析enable属性，并不是每一个组件都有
 		PropertyInfo propInfo=component.GetType().GetProperty("enabled");
 		if(propInfo!=null){
@@ -525,7 +525,7 @@ public class ExportB2WorldEditor:Editor {
 					//Debug.Log("data.value.b2BodyObjectVal!=null:"+(data.value.b2BodyObjectVal!=null));
 					if(data.value.b2BodyObjectVal!=null){
 						//Debug.Log(prop.GetComponent<b2BodyObject>()==data.value.b2BodyObjectVal);
-						bodyValue=data.value.b2BodyObjectVal.GetInstanceID().ToString();
+						bodyValue=data.value.b2BodyObjectVal.GetEntityId().ToString();
 					}
 					element.SetAttribute("value",bodyValue);
 					break;
@@ -545,7 +545,7 @@ public class ExportB2WorldEditor:Editor {
 				case UserData.CustomPropertyType.GameObject:
 					string gameObjectValue="null";
 					if(data.value.gameObjectVal!=null){
-						gameObjectValue=data.value.gameObjectVal.GetInstanceID().ToString();
+						gameObjectValue=data.value.gameObjectVal.GetEntityId().ToString();
 					}
 					element.SetAttribute("value",gameObjectValue);
 					break;
@@ -563,7 +563,7 @@ public class ExportB2WorldEditor:Editor {
 		//ConnectedB2BodyObject    "null"/"instanceID"
 		XmlElement connectedB2BodyObjectElement=xml.CreateElement("ConnectedB2BodyObject");
 		if(revoluteJointObject.connectedB2BodyObject==null) connectedB2BodyObjectElement.InnerText="null";
-		else connectedB2BodyObjectElement.InnerText=revoluteJointObject.connectedB2BodyObject.GetInstanceID().ToString();
+		else connectedB2BodyObjectElement.InnerText=revoluteJointObject.connectedB2BodyObject.GetEntityId().ToString();
 		componentElement.AppendChild(connectedB2BodyObjectElement);
 		//AutoConfigureAnchor
 		XmlElement autoConfigureAnchorElement=xml.CreateElement("AutoConfigureAnchor");
@@ -618,7 +618,7 @@ public class ExportB2WorldEditor:Editor {
 		//ConnectedB2BodyObject    "null"/"instanceID"
 		XmlElement connectedB2BodyObjectElement=xml.CreateElement("ConnectedB2BodyObject");
 		if(ropeJointObject.connectedB2BodyObject==null) connectedB2BodyObjectElement.InnerText="null";
-		else connectedB2BodyObjectElement.InnerText=ropeJointObject.connectedB2BodyObject.GetInstanceID().ToString();
+		else connectedB2BodyObjectElement.InnerText=ropeJointObject.connectedB2BodyObject.GetEntityId().ToString();
 		componentElement.AppendChild(connectedB2BodyObjectElement);
 		//AutoConfigureAnchor
 		XmlElement autoConfigureAnchorElement=xml.CreateElement("AutoConfigureAnchor");
