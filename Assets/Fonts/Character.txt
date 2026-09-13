@@ -8,3 +8,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 1. 已侦听 空格键 按下/释放
 2. 已侦听 鼠标左键 按下/释放
 请查看控制面板输出信息
+
+按下鼠标左键/J键，执行 fire 动作
+长按空格键，执行 longJump 动作
+
