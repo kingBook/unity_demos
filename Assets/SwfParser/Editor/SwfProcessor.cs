@@ -6,12 +6,18 @@ using Debug = UnityEngine.Debug;
 
 public static class SwfProcessor {
 
+    /// <summary>
+    /// 解析 .swf
+    /// </summary>
+    /// <param name="swfPath"> "Assets/xx.swf" </param>
     public static void ParseSwf(string swfPath) {
-        // 转为绝对路径, 如：E:/kingBook/projects/unity_swfParse/Assets/xx.swf
+
+        // 转为绝对路径, 如：E:/projects/unity_swfParse/Assets/xx.swf
         swfPath = FileUtil.GetLogicalPath(System.IO.Path.GetFullPath(swfPath));
-        // 截取掉 /xx.swf 的文件夹路径，如：E:/kingBook/projects/unity_swfParse/Assets
+        // 截取掉 /xx.swf 的文件夹路径，如：E:/projects/unity_swfParse/Assets
         string swfFolderPath = FileUtil.GetLogicalPath(System.IO.Path.GetDirectoryName(swfPath));
 
+        // =========== 创建 Swf 类实例 ===================================
         Stopwatch sw = new Stopwatch();
         sw.Start();
         var swf = Swf.Create(swfPath);
@@ -23,6 +29,7 @@ public static class SwfProcessor {
             SwfXmlExporter swfXmlExporter = new SwfXmlExporter(swf);
             swfXmlExporter.Export(swfPath);
         }
+
         // =========== 导出位图 ==========================================
         AtlasesData atlasesData = null;
         switch (SwfParseConfig.exportImagesOption) {
@@ -36,11 +43,13 @@ public static class SwfProcessor {
                 break;
         }
         Debug.Log("atlasesData.rectInfo2Ds:" + atlasesData.rectInfo2Ds.Length);
+
         // =========== 导出运行时数据 (xx.swfData) ======================
         if (SwfParseConfig.isExportSwfData) {
             var swfAssetExporter = new SwfAssetExporter(swf);
             swfAssetExporter.Export(swfPath, atlasesData);
         }
+        
         // ===============================================================
         AssetDatabase.Refresh();
         Debug.Log($"Parseing completed: {FileUtil.GetProjectRelativePath(swfPath)}");

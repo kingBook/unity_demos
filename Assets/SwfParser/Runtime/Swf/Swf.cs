@@ -20,7 +20,7 @@ public class Swf : ScriptableObject {
     /// <summary>
     ///  根据 swf 绝对路径创建
     /// </summary>
-    /// <param name="swfPath"> 绝对路径, 如：E:/kingBook/projects/unity_swfParse/Assets/xx.swf </param>
+    /// <param name="swfPath"> 绝对路径, 如：E:/projects/unity_swfParse/Assets/xx.swf </param>
     public static Swf Create(string swfPath) {
         Swf swf = CreateInstance<Swf>();
         swf.tags = new List<Tag>(256);
