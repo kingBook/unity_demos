@@ -1,14 +1,17 @@
-﻿using System.Xml;
+using System.Xml;
 
-[System.Serializable]
-public class EndTag : Tag {
+namespace SwfParserRuntime {
 
-    public EndTag(SwfByteArray bytes, TagHeaderRecord header) : base(header) {
+    [System.Serializable]
+    public class EndTag : Tag {
+
+        public EndTag(SwfByteArray bytes, TagHeaderRecord header) : base(header) {
+
+        }
+
+        public override XmlElement ToXml(XmlDocument doc) {
+            return CreateXmlElement(doc, "End");
+        }
 
     }
-
-    public override XmlElement ToXml(XmlDocument doc) {
-        return CreateXmlElement(doc, "End");
-    }
-
 }

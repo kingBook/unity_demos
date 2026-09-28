@@ -1,20 +1,23 @@
 using UnityEngine;
 
-public class Shape : DisplayObject {
+namespace SwfParserRuntime {
 
-    //public Graphics graphics;
+    public class Shape : DisplayObject {
 
-    public int vertexStartIndex { get; private set; }
-    public int vertexEndIndex { get; private set; }
-    public int subMeshIndex { get; private set; }
+        //public Graphics graphics;
 
-    public Shape(MeshHelperBase meshHelper, (Texture2D atlas, string atlasPath, RectInfo? rectInfo) atlasData, Matrix matrix) : base() {
-        meshHelper.AddRectInfo(atlasData.atlas, atlasData.rectInfo.Value, matrix, out int vertexStartIndex, out int vertexEndIndex, out int subMeshIndex);
-        this.vertexStartIndex = vertexStartIndex;
-        this.vertexEndIndex = vertexEndIndex;
-        this.subMeshIndex = subMeshIndex;
+        public int vertexStartIndex { get; private set; }
+        public int vertexEndIndex { get; private set; }
+        public int subMeshIndex { get; private set; }
 
+        public Shape(MeshHelperBase meshHelper, (Texture2D atlas, string atlasPath, RectInfo? rectInfo) atlasData, Matrix matrix) : base() {
+            meshHelper.AddRectInfo(atlasData.atlas, atlasData.rectInfo.Value, matrix, out int vertexStartIndex, out int vertexEndIndex, out int subMeshIndex);
+            this.vertexStartIndex = vertexStartIndex;
+            this.vertexEndIndex = vertexEndIndex;
+            this.subMeshIndex = subMeshIndex;
+
+
+        }
 
     }
-
 }

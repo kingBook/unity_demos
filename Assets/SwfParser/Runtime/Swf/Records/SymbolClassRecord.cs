@@ -1,12 +1,15 @@
-﻿[System.Serializable]
-public struct SymbolClassRecord{
+namespace SwfParserRuntime {
 
-    public ushort tagId;
-    public string name;
+    [System.Serializable]
+    public struct SymbolClassRecord {
 
-    public SymbolClassRecord(SwfByteArray bytes) {
-        tagId = bytes.ReadUI16();
-        name = bytes.ReadString();
+        public ushort tagId;
+        public string name;
+
+        public SymbolClassRecord(SwfByteArray bytes) {
+            tagId = bytes.ReadUI16();
+            name = bytes.ReadString();
+        }
+
     }
-
 }

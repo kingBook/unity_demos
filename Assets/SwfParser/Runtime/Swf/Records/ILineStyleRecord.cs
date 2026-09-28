@@ -1,6 +1,9 @@
-﻿using System.Xml;
+using System.Xml;
 
-public interface ILineStyleRecord {
-    
-    XmlElement ToXml(XmlDocument doc);
+namespace SwfParserRuntime {
+
+    public interface ILineStyleRecord {
+
+        XmlElement ToXml(XmlDocument doc);
+    }
 }

@@ -1,14 +1,17 @@
-[System.Serializable]
-public class RectInfoArray {
+namespace SwfParserRuntime {
 
-    public RectInfo[] rectInfos;
+    [System.Serializable]
+    public class RectInfoArray {
 
-    public RectInfoArray(int length) {
-        rectInfos = new RectInfo[length];
-    }
+        public RectInfo[] rectInfos;
 
-    public RectInfo this[int index] {
-        get { return rectInfos[index]; }
-        set { rectInfos[index] = value; }
+        public RectInfoArray(int length) {
+            rectInfos = new RectInfo[length];
+        }
+
+        public RectInfo this[int index] {
+            get { return rectInfos[index]; }
+            set { rectInfos[index] = value; }
+        }
     }
 }

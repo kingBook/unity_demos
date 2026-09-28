@@ -1,9 +1,12 @@
 using System.Collections.Generic;
 
-public interface ICharacterIdTag {
+namespace SwfParserRuntime {
 
-    void FindUsedCharacterIds(List<ushort> characterIds, Swf swf);
+    public interface ICharacterIdTag {
 
-    ushort GetCharacterId();
+        void FindUsedCharacterIds(List<ushort> characterIds, Swf swf);
 
+        ushort GetCharacterId();
+
+    }
 }

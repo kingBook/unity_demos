@@ -1,12 +1,15 @@
-﻿[System.Serializable]
-public struct GlyphEntryRecord {
 
-    public uint glyphIndex;
-    public int glyphAdvance;
+namespace SwfParserRuntime {
 
-    public GlyphEntryRecord(SwfByteArray bytes, byte glyphBits, byte advanceBits) {
-        glyphIndex = bytes.ReadUB(glyphBits);
-        glyphAdvance = bytes.ReadSB(advanceBits);
+    [System.Serializable]
+    public struct GlyphEntryRecord {
+
+        public uint glyphIndex;
+        public int glyphAdvance;
+
+        public GlyphEntryRecord(SwfByteArray bytes, byte glyphBits, byte advanceBits) {
+            glyphIndex = bytes.ReadUB(glyphBits);
+            glyphAdvance = bytes.ReadSB(advanceBits);
+        }
     }
-
 }

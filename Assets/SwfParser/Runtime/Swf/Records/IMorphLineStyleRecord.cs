@@ -1,6 +1,9 @@
-﻿using System.Xml;
+using System.Xml;
 
-public interface IMorphLineStyleRecord {
+namespace SwfParserRuntime {
 
-    XmlElement ToXml(XmlDocument doc);
+    public interface IMorphLineStyleRecord {
+
+        XmlElement ToXml(XmlDocument doc);
+    }
 }

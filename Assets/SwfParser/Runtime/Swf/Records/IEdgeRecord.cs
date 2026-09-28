@@ -1,3 +1,6 @@
-﻿public interface IEdgeRecord : IShapeRecord {
+namespace SwfParserRuntime {
 
+    public interface IEdgeRecord : IShapeRecord {
+
+    }
 }

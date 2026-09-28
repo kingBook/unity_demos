@@ -1,30 +1,33 @@
-﻿using System.Xml;
+using System.Xml;
 
-[System.Serializable]
-public class JPEGTablesTag : Tag {
+namespace SwfParserRuntime {
 
-    public byte[] jpegData;
+    [System.Serializable]
+    public class JPEGTablesTag : Tag {
 
-    public JPEGTablesTag(SwfByteArray bytes, TagHeaderRecord header) : base(header) {
-        int length = (int)header.length;
-        if (length > 0) {
-            jpegData = bytes.ReadBytes(length);
-        }
-    }
+        public byte[] jpegData;
 
-    public override XmlElement ToXml(XmlDocument doc) {
-        var ele = CreateXmlElement(doc, "JPEGTables");
-        string jpegDataStr = "";
-        if (jpegData != null) {
-            for (int i = 0; i < jpegData.Length; i++) {
-                jpegDataStr += jpegData[i].ToString();
-                if (i < jpegData.Length - 1) {
-                    jpegDataStr += ",";
-                }
+        public JPEGTablesTag(SwfByteArray bytes, TagHeaderRecord header) : base(header) {
+            int length = (int)header.length;
+            if (length > 0) {
+                jpegData = bytes.ReadBytes(length);
             }
         }
-        ele.SetAttribute("jpegData", jpegDataStr);
-        return ele;
-    }
 
+        public override XmlElement ToXml(XmlDocument doc) {
+            var ele = CreateXmlElement(doc, "JPEGTables");
+            string jpegDataStr = "";
+            if (jpegData != null) {
+                for (int i = 0; i < jpegData.Length; i++) {
+                    jpegDataStr += jpegData[i].ToString();
+                    if (i < jpegData.Length - 1) {
+                        jpegDataStr += ",";
+                    }
+                }
+            }
+            ele.SetAttribute("jpegData", jpegDataStr);
+            return ele;
+        }
+
+    }
 }

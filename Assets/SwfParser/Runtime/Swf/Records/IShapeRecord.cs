@@ -1,6 +1,9 @@
-﻿using System.Xml;
+using System.Xml;
 
-public interface IShapeRecord {
-    
-    XmlElement ToXml(XmlDocument doc);
+namespace SwfParserRuntime {
+
+    public interface IShapeRecord {
+
+        XmlElement ToXml(XmlDocument doc);
+    }
 }

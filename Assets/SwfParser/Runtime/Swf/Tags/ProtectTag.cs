@@ -1,14 +1,17 @@
-﻿using System.Xml;
+using System.Xml;
 
-[System.Serializable]
-public class ProtectTag : Tag {
+namespace SwfParserRuntime {
 
-    public ProtectTag(SwfByteArray bytes, TagHeaderRecord header) : base(header) {
-        
-    }
+    [System.Serializable]
+    public class ProtectTag : Tag {
 
-    public override XmlElement ToXml(XmlDocument doc) {
-        var ele = CreateXmlElement(doc, "Protect");
-        return ele;
+        public ProtectTag(SwfByteArray bytes, TagHeaderRecord header) : base(header) {
+
+        }
+
+        public override XmlElement ToXml(XmlDocument doc) {
+            var ele = CreateXmlElement(doc, "Protect");
+            return ele;
+        }
     }
 }

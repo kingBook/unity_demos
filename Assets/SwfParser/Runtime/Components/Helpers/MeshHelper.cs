@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class MeshHelper : MeshHelperBase {
+namespace SwfParserRuntime {
 
-    private MeshRenderer m_meshRenderer;
+    public class MeshHelper : MeshHelperBase {
 
-    public MeshHelper(MeshFilter meshFilter, MeshRenderer meshRenderer) {
-        meshFilter.mesh = m_mesh;
-        m_meshRenderer = meshRenderer;
-    }
+        private MeshRenderer m_meshRenderer;
 
-    public override void AddRectInfo(Texture2D atlas, RectInfo rectInfo, Matrix matrix, out int vertexStartIndex, out int vertexEndIndex, out int subMeshIndex) {
-        base.AddRectInfo(atlas, rectInfo, matrix, out vertexStartIndex, out vertexEndIndex, out subMeshIndex);
-        m_meshRenderer.SetMaterials(m_materials);
-    }
+        public MeshHelper(MeshFilter meshFilter, MeshRenderer meshRenderer) {
+            meshFilter.mesh = m_mesh;
+            m_meshRenderer = meshRenderer;
+        }
 
-};
+        public override void AddRectInfo(Texture2D atlas, RectInfo rectInfo, Matrix matrix, out int vertexStartIndex, out int vertexEndIndex, out int subMeshIndex) {
+            base.AddRectInfo(atlas, rectInfo, matrix, out vertexStartIndex, out vertexEndIndex, out subMeshIndex);
+            m_meshRenderer.SetMaterials(m_materials);
+        }
+
+    };
+}

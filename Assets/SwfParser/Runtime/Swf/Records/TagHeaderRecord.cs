@@ -1,20 +1,23 @@
-﻿[System.Serializable]
-public struct TagHeaderRecord {
+namespace SwfParserRuntime {
 
-    public const uint SHORT_HEADER_MAX_LENGTH = 0x3F;
+    [System.Serializable]
+    public struct TagHeaderRecord {
 
-    public ushort type;
-    public uint length;
+        public const uint SHORT_HEADER_MAX_LENGTH = 0x3F;
 
-    public bool isLong => length >= SHORT_HEADER_MAX_LENGTH;
+        public ushort type;
+        public uint length;
 
-    public TagHeaderRecord(SwfByteArray bytes) {
-        ushort tagInfo = bytes.ReadUI16();
-        type = (ushort)(tagInfo >> 6);
-        uint length = (uint)(tagInfo & ((1 << 6) - 1));
-        if (length == 0x3F) {
-            length = bytes.ReadUI32();
+        public bool isLong => length >= SHORT_HEADER_MAX_LENGTH;
+
+        public TagHeaderRecord(SwfByteArray bytes) {
+            ushort tagInfo = bytes.ReadUI16();
+            type = (ushort)(tagInfo >> 6);
+            uint length = (uint)(tagInfo & ((1 << 6) - 1));
+            if (length == 0x3F) {
+                length = bytes.ReadUI32();
+            }
+            this.length = length;
         }
-        this.length = length;
     }
 }

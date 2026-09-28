@@ -1,8 +1,12 @@
-public class Bitmap : DisplayObject {
+namespace SwfParserRuntime {
 
-    public BitmapData bitmapData;
+    public class Bitmap : DisplayObject {
 
-    public Bitmap() : base() {
+        public BitmapData bitmapData;
+
+        public Bitmap() : base() {
+
+        }
 
     }
 }

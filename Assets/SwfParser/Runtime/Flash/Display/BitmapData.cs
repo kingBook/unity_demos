@@ -1,3 +1,6 @@
-public class BitmapData {
-    
+namespace SwfParserRuntime {
+
+    public class BitmapData {
+
+    }
 }

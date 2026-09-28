@@ -1,7 +1,10 @@
-﻿[System.Serializable]
-public struct ExportAssetRecord {
+namespace SwfParserRuntime {
 
-    public ushort tag;
-    public string name;
+    [System.Serializable]
+    public struct ExportAssetRecord {
 
+        public ushort tag;
+        public string name;
+
+    }
 }

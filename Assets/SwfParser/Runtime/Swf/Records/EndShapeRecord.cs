@@ -1,20 +1,23 @@
-﻿using System.Xml;
+using System.Xml;
 
-[System.Serializable]
-public struct EndShapeRecord : IShapeRecord { //Shape Record
+namespace SwfParserRuntime {
 
-    public bool typeFlag;
-    public uint endOfShape;
+    [System.Serializable]
+    public struct EndShapeRecord : IShapeRecord { //Shape Record
 
-    public EndShapeRecord(SwfByteArray bytes, bool typeFlag) {
-        this.typeFlag = typeFlag;
-        endOfShape = bytes.ReadUB(5);
-    }
+        public bool typeFlag;
+        public uint endOfShape;
 
-    public XmlElement ToXml(XmlDocument doc) {
-        var ele = doc.CreateElement("EndShapeRecord");
-        ele.SetAttribute("typeFlag", typeFlag.ToString());
-        ele.SetAttribute("endOfShape", endOfShape.ToString());
-        return ele;
+        public EndShapeRecord(SwfByteArray bytes, bool typeFlag) {
+            this.typeFlag = typeFlag;
+            endOfShape = bytes.ReadUB(5);
+        }
+
+        public XmlElement ToXml(XmlDocument doc) {
+            var ele = doc.CreateElement("EndShapeRecord");
+            ele.SetAttribute("typeFlag", typeFlag.ToString());
+            ele.SetAttribute("endOfShape", endOfShape.ToString());
+            return ele;
+        }
     }
 }

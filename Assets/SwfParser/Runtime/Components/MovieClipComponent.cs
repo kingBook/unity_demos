@@ -1,22 +1,24 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace SwfParserRuntime {
 
-[RequireComponent(typeof(MeshFilter), typeof(MeshRenderer)), DisallowMultipleComponent]
-public class MovieClipComponent : MonoBehaviour {
+    [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer)), DisallowMultipleComponent]
+    public class MovieClipComponent : MonoBehaviour {
 
-    [SerializeField] private Swf m_swf;
-    [SerializeField] private string m_symbolClassName;
-    private MovieClip m_movieClip;
+        [SerializeField] private Swf m_swf;
+        [SerializeField] private string m_symbolClassName;
+        private MovieClip m_movieClip;
 
-    private void Awake() {
-        Debug.Log("MovieClipComponent::Awake();");
+        private void Awake() {
+            Debug.Log("MovieClipComponent::Awake();");
 
-        MeshFilter meshFilter = GetComponent<MeshFilter>();
-        MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+            MeshFilter meshFilter = GetComponent<MeshFilter>();
+            MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 
-        var meshHelper = new MeshHelper(meshFilter, meshRenderer);
-        m_movieClip = new MovieClip(m_swf, meshHelper, m_symbolClassName);
+            var meshHelper = new MeshHelper(meshFilter, meshRenderer);
+            m_movieClip = new MovieClip(m_swf, meshHelper, m_symbolClassName);
+        }
+
     }
-
 }

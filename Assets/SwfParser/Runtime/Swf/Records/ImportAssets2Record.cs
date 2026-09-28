@@ -1,7 +1,10 @@
-﻿[System.Serializable]
-public struct ImportAssets2Record {
-    
-    public ushort tag;
-    public string name;
+namespace SwfParserRuntime {
 
+    [System.Serializable]
+    public struct ImportAssets2Record {
+
+        public ushort tag;
+        public string name;
+
+    }
 }
