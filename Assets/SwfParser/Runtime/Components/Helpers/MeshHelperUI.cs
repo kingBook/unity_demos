@@ -24,9 +24,7 @@ namespace SwfParserRuntime {
             });
             canvasRenderer.SetMesh(mesh);
 
-
-
-            //Material whiteMat = new(Shader.Find("UI/Default"));
+            // Material whiteMat = new(Shader.Find("UI/Default"));
             Material redMat = new(Shader.Find("UI/Default"));
             redMat.SetColor("_Color", Color.red);
             canvasRenderer.SetMaterial(redMat, 0);
