@@ -1,13 +1,16 @@
 using System.Numerics;
 using UnityEngine;
 
-public class Transform {
+namespace SwfParserRuntime {
 
-    //public colorTransform;
-    public Matrix matrix;
-    
-    public Transform (){
-        matrix = new Matrix();
+    public class Transform {
+
+        //public colorTransform;
+        public Matrix matrix;
+
+        public Transform() {
+            matrix = new Matrix();
+        }
+
     }
-
 }
