@@ -23,10 +23,10 @@ public class CustomUVGraphic : MaskableGraphic {
         float h = rect.height;
 
         // 4个顶点位置（UI坐标，原点在Rect中心）
-        Vector2 pos0 = new Vector2(-w / 2, -h / 2);
-        Vector2 pos1 = new Vector2(w / 2, -h / 2);
-        Vector2 pos2 = new Vector2(w / 2, h / 2);
-        Vector2 pos3 = new Vector2(-w / 2, h / 2);
+        Vector2 pos0 = new (-w / 2, -h / 2);
+        Vector2 pos1 = new (w / 2, -h / 2);
+        Vector2 pos2 = new (w / 2, h / 2);
+        Vector2 pos3 = new (-w / 2, h / 2);
 
         // ========== 自定义UV区域 ==========
         // 如果使用Sprite，要用DataUtility.GetOuterUV获取sprite真实uv，不要直接0~1
@@ -37,10 +37,10 @@ public class CustomUVGraphic : MaskableGraphic {
         float vMax = spriteUV.w;
 
         // 四个顶点UV
-        Vector2 uv0 = new Vector2(uMin, vMin);
-        Vector2 uv1 = new Vector2(uMax, vMin);
-        Vector2 uv2 = new Vector2(uMax, vMax);
-        Vector2 uv3 = new Vector2(uMin, vMax);
+        Vector2 uv0 = new (uMin, vMin);
+        Vector2 uv1 = new (uMax, vMin);
+        Vector2 uv2 = new (uMax, vMax);
+        Vector2 uv3 = new (uMin, vMax);
 
         Color vertColor = color;
 

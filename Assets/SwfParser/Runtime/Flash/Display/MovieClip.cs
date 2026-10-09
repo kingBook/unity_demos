@@ -91,9 +91,9 @@ namespace SwfParserRuntime {
         /// <returns> 返回一个二维列表，一维：帧索引；二维：当前帧的 controlTags </returns>
         private List<Tag>[] GetFrameTags(DefineSpriteTag defineSpriteTag) {
             int frameCount = defineSpriteTag.frameCount;
-            var frameDatas = new List<Tag>[frameCount];
+            var frameTags = new List<Tag>[frameCount];
             for (int i = 0; i < frameCount; i++) {
-                frameDatas[i] = new List<Tag>();
+                frameTags[i] = new List<Tag>();
             }
             // 
             int frameIndex = 0;
@@ -105,9 +105,9 @@ namespace SwfParserRuntime {
                     frameIndex++;
                     continue; // 不添加 ShowFrame
                 }
-                frameDatas[frameIndex].Add(tag);
+                frameTags[frameIndex].Add(tag);
             }
-            return frameDatas;
+            return frameTags;
         }
 
         /// <summary>
@@ -116,10 +116,10 @@ namespace SwfParserRuntime {
         /// <param name="frameIndex"> 帧索引 </param>
         public void GotoFrame(int frameIndex) {
             frameIndex = Math.Clamp(frameIndex, 0, m_frameTags.Length - 1);
-            List<Tag> frameData = m_frameTags[frameIndex];
+            List<Tag> frameTags = m_frameTags[frameIndex];
 
-            for (int i = 0, len = frameData.Count; i < len; i++) {
-                var tag = frameData[i];
+            for (int i = 0, len = frameTags.Count; i < len; i++) {
+                var tag = frameTags[i];
                 tag.Load(m_swf, m_meshHelper, this);
             }
         }
