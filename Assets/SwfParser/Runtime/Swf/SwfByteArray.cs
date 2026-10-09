@@ -64,7 +64,7 @@ namespace SwfParserRuntime {
         public SwfByteArray(string swfPath) {
             var fs = File.OpenRead(swfPath);
             m_memoryStream = new MemoryStream();
-            CopyStream(fs, m_memoryStream);
+            ZlibUtil.CopyStream(fs, m_memoryStream);
             m_memoryStream.Position = 0;
 
             m_binaryReader = new BinaryReader(m_memoryStream);
@@ -117,28 +117,23 @@ namespace SwfParserRuntime {
 
         public void Decompress() {
             long msPos = m_memoryStream.Position;
-            MemoryStream outMS = new MemoryStream();
-            zlib.ZOutputStream outZStream = new zlib.ZOutputStream(outMS);
-
-            CopyStream(m_memoryStream, outZStream);
-            outZStream.finish();
+            
+            // old
+            // MemoryStream outMS = new MemoryStream();
+            // zlib.ZOutputStream outZStream = new zlib.ZOutputStream(outMS);
+            // ZlibUtil.CopyStream(m_memoryStream, outZStream);
+            // outZStream.finish();
+            //
+            // new 
+            MemoryStream outMS = ZlibUtil.DecompressStream(m_memoryStream);
 
             outMS.Position = 0;
             m_memoryStream.Position = msPos;
-            CopyStream(outMS, m_memoryStream);
+            ZlibUtil.CopyStream(outMS, m_memoryStream);
             m_memoryStream.Position = msPos;
 
             outMS.Close();
-            outZStream.Close();
-        }
-
-        private void CopyStream(Stream input, Stream output) {
-            byte[] buffer = new byte[2000];
-            int len;
-            while ((len = input.Read(buffer, 0, 2000)) > 0) {
-                output.Write(buffer, 0, len);
-            }
-            output.Flush();
+            // outZStream.Close();
         }
 
         public void Clear() {
