@@ -125,6 +125,13 @@
         "com.unity.searcher": "4.9.3"
       }
     },
+    "com.unity.sharp-zip-lib": {
+      "version": "1.4.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
       "version": "1.7.0",
       "depth": 0,
