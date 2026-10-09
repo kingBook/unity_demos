@@ -88,7 +88,6 @@ namespace SwfParserRuntime {
 
             InflaterInputStream zIn = new(sourceStream);
             zIn.CopyTo(outStream);
-            outStream.Flush();
             return outStream;
         }
     }
