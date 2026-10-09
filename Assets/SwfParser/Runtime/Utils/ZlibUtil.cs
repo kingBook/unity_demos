@@ -19,21 +19,21 @@ namespace SwfParserRuntime {
             output.Flush();
         }
 
-        /// <summary>
-        /// 压缩字节数组
-        /// </summary>
-        /// <param name="sourceByte">需要被压缩的字节数组</param>
-        /// <returns>压缩后的字节数组</returns>
-        public static byte[] CompressBytes(byte[] sourceByte) {
-            MemoryStream inputStream = new(sourceByte);
-            Stream outStream = CompressStream(inputStream);
-            byte[] outPutByteArray = new byte[outStream.Length];
-            outStream.Position = 0;
-            outStream.Read(outPutByteArray, 0, outPutByteArray.Length);
-            outStream.Close();
-            inputStream.Close();
-            return outPutByteArray;
-        }
+        // /// <summary>
+        // /// 压缩字节数组
+        // /// </summary>
+        // /// <param name="sourceByte">需要被压缩的字节数组</param>
+        // /// <returns>压缩后的字节数组</returns>
+        // public static byte[] CompressBytes(byte[] sourceByte) {
+        //     MemoryStream inputStream = new(sourceByte);
+        //     Stream outStream = CompressStream(inputStream);
+        //     byte[] outPutByteArray = new byte[outStream.Length];
+        //     outStream.Position = 0;
+        //     outStream.Read(outPutByteArray, 0, outPutByteArray.Length);
+        //     outStream.Close();
+        //     inputStream.Close();
+        //     return outPutByteArray;
+        // }
 
         /// <summary>
         /// 解压缩字节数组
@@ -51,26 +51,26 @@ namespace SwfParserRuntime {
             return outputBytes;
         }
 
-        /// <summary>
-        /// zlib 压缩(此方法还未验证)
-        /// </summary>
-        /// <param name="sourceStream">需要被压缩的流</param>
-        /// <returns>压缩后的流</returns>
-        public static MemoryStream CompressStream(Stream sourceStream) {
-            MemoryStream streamOut = new();
+        // /// <summary>
+        // /// zlib 压缩(此方法还未验证)
+        // /// </summary>
+        // /// <param name="sourceStream">需要被压缩的流</param>
+        // /// <returns>压缩后的流</returns>
+        // public static MemoryStream CompressStream(Stream sourceStream) {
+        //     MemoryStream streamOut = new();
 
-            // old
-            // ZOutputStream streamZOut = new ZOutputStream(streamOut, zlibConst.Z_DEFAULT_COMPRESSION);
-            // CopyStream(sourceStream, streamZOut);
-            // streamZOut.finish();
-            // return streamOut;
+        //     // old
+        //     // ZOutputStream streamZOut = new ZOutputStream(streamOut, zlibConst.Z_DEFAULT_COMPRESSION);
+        //     // CopyStream(sourceStream, streamZOut);
+        //     // streamZOut.finish();
+        //     // return streamOut;
 
-            DeflaterOutputStream zOut = new(streamOut);
-            sourceStream.CopyTo(zOut);
-            zOut.Finish();
-            //zOut.Flush();
-            return streamOut;
-        }
+        //     DeflaterOutputStream zOut = new(streamOut);
+        //     sourceStream.CopyTo(zOut);
+        //     zOut.Finish();
+        //     //zOut.Flush();
+        //     return streamOut;
+        // }
 
         /// <summary>
         /// zlib 解压
