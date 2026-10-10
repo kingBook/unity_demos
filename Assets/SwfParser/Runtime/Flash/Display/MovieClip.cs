@@ -19,19 +19,20 @@ namespace SwfParserRuntime {
         private List<Tag>[] m_frameTags;
         private MeshHelperBase m_meshHelper;
 
-        public MovieClip(Swf swf, MeshHelperBase meshHelper, string symbolClassName) : base() {
+        public MovieClip(Swf swf, MeshHelperBase meshHelper, string symbolClassName, bool isInUI) : base() {
             // 获取与类名匹配的 DefineSpriteTag
             DefineSpriteTag defineSpriteTag = swf.GetUsedDefineSpriteTag(symbolClassName);
-            Init(swf, meshHelper, defineSpriteTag);
+            Init(swf, meshHelper, defineSpriteTag, isInUI);
         }
 
-        public MovieClip(Swf swf, MeshHelperBase meshHelper, DefineSpriteTag defineSpriteTag) : base() {
-            Init(swf, meshHelper, defineSpriteTag);
+        public MovieClip(Swf swf, MeshHelperBase meshHelper, DefineSpriteTag defineSpriteTag, bool isInUI) : base() {
+            Init(swf, meshHelper, defineSpriteTag, isInUI);
         }
 
-        private void Init(Swf swf, MeshHelperBase meshHelper, DefineSpriteTag defineSpriteTag) {
+        private void Init(Swf swf, MeshHelperBase meshHelper, DefineSpriteTag defineSpriteTag, bool isInUI) {
             m_meshHelper = meshHelper;
             m_swf = swf;
+            m_isInUI = isInUI;
 
             // 获取 defineSpriteTag 所有帧的 controlTags
             m_frameTags = GetFrameTags(defineSpriteTag);
@@ -120,7 +121,7 @@ namespace SwfParserRuntime {
 
             for (int i = 0, len = frameTags.Count; i < len; i++) {
                 var tag = frameTags[i];
-                tag.Load(m_swf, m_meshHelper, this);
+                tag.Load(m_swf, m_meshHelper, this, m_isInUI);
             }
         }
 

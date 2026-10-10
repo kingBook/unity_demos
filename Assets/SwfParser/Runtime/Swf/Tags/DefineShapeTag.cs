@@ -20,7 +20,7 @@ namespace SwfParserRuntime {
             shapes = new ShapeWithStyleRecord(bytes, 1);
         }
 
-        public override void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent) {
+        public override void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent, bool isInUI) {
             // bitmapId
             FillStyleRecord[] fillStyles = shapes.fillStyles.fillStyles;
             if (fillStyles.Length >= 2) {

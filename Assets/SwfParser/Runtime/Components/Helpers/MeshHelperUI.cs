@@ -4,7 +4,7 @@ namespace SwfParserRuntime {
 
     public class MeshHelperUI : MeshHelperBase {
 
-        public MeshHelperUI(CanvasRenderer canvasRenderer) : base() {
+        public MeshHelperUI() : base() {
             var mesh = new Mesh();
             mesh.SetVertices(new Vector3[]{
                 new (0,0,0),
@@ -22,12 +22,10 @@ namespace SwfParserRuntime {
                 Vector3.back,
                 Vector3.back
             });
-            canvasRenderer.SetMesh(mesh);
 
             // Material whiteMat = new(Shader.Find("UI/Default"));
             Material redMat = new(Shader.Find("UI/Default"));
             redMat.SetColor("_Color", Color.red);
-            canvasRenderer.SetMaterial(redMat, 0);
         }
 
     }

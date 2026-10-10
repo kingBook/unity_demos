@@ -57,8 +57,9 @@ namespace SwfParserRuntime {
             m_tempInts.Clear();
 
             // 材质 ------------------------------------------
-            var material = new Material(Shader.Find("Sprites/Default"));
-            material.mainTexture = atlas;
+            Material material = new (Shader.Find("Sprites/Default")) {
+                mainTexture = atlas
+            };
             m_materials.Add(material);
 
             // 由子类重写此方法，将材质应用到渲染器

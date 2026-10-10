@@ -17,14 +17,14 @@ namespace SwfParserRuntime {
         }
 
         protected XmlElement CreateXmlElement(XmlDocument doc, string elementName = null) {
-            if (elementName == null) elementName = GetClassName();
+            elementName ??= GetClassName();
             var ele = doc.CreateElement(elementName);
             ele.SetAttribute("type", header.type.ToString());
             ele.SetAttribute("length", header.length.ToString());
             return ele;
         }
 
-        public virtual void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent) {
+        public virtual void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent, bool isInUI) {
             // 子类重写
             Debug2.Log((TagType)header.type + " Load() 方法未实现");
         }

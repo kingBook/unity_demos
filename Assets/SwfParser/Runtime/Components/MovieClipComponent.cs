@@ -11,13 +11,13 @@ namespace SwfParserRuntime {
         private MovieClip m_movieClip;
 
         private void Awake() {
-            Debug.Log("MovieClipComponent::Awake();");
+            Debug.Log($"{GetType().Name}::Awake();");
 
             MeshFilter meshFilter = GetComponent<MeshFilter>();
             MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 
             var meshHelper = new MeshHelper(meshFilter, meshRenderer);
-            m_movieClip = new MovieClip(m_swf, meshHelper, m_symbolClassName);
+            m_movieClip = new MovieClip(m_swf, meshHelper, m_symbolClassName, isInUI: false);
         }
 
     }

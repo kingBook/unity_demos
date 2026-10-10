@@ -20,6 +20,8 @@ namespace SwfParserRuntime {
         public float x;
         public float y;
 
+        protected bool m_isInUI;
+
         public DisplayObject() {
             alpha = 1;
             transform = new Transform();

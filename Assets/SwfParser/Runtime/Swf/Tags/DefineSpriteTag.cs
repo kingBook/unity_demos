@@ -31,8 +31,8 @@ namespace SwfParserRuntime {
             return tempTags.ToArray();
         }
 
-        public override void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent) {
-            var mc = new MovieClip(swf, meshHelper, this);
+        public override void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent, bool isInUI) {
+            var mc = new MovieClip(swf, meshHelper, this, isInUI);
             parent.AddChild(mc);
         }
 
