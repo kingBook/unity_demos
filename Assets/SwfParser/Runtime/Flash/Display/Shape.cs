@@ -7,6 +7,9 @@ namespace SwfParserRuntime {
 
         //public Graphics graphics;
 
+        public Mesh mesh { get; protected set; }
+        public Material material { get; protected set; }
+
         public Shape(AtlasData atlasData, Matrix matrix) : base() {
             Texture2D atlas = atlasData.atlas;
             string atlasPath = atlasData.atlasPath;
@@ -44,12 +47,12 @@ namespace SwfParserRuntime {
             mesh.SetNormals(normals);
 
             // 三角形 ----------------------------------------
-            int[] triangles = new int[3*2] {
+            int[] triangles = new int[3 * 2] {
                 0,1,3,
                 1,2,3
             };
             mesh.SetTriangles(triangles, 0);
-            
+
             // 材质 ------------------------------------------
             material = new(Shader.Find("Sprites/Default")) {
                 mainTexture = atlas
