@@ -20,7 +20,7 @@ namespace SwfParserRuntime {
             shapes = new ShapeWithStyleRecord(bytes, 1);
         }
 
-        public override void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent, bool isInUI) {
+        public override void Load(Swf swf, DisplayObjectContainer parent, bool isInUI) {
             // bitmapId
             FillStyleRecord[] fillStyles = shapes.fillStyles.fillStyles;
             if (fillStyles.Length >= 2) {
@@ -29,7 +29,7 @@ namespace SwfParserRuntime {
                 if (type == 0x40 || type == 0x41 || type == 0x42 || type == 0x43) {
                     var atlasData = swf.atlasesData.GetAtlasData(fillStyle.bitmapId);
                     //Debug2.Log(fillStyle.bitmapMatrix);
-                    var shape = new Shape(meshHelper, atlasData, fillStyle.bitmapMatrix.ToMatrix());
+                    var shape = new Shape(atlasData, fillStyle.bitmapMatrix.ToMatrix());
                     parent.AddChild(shape);
                 }
             }

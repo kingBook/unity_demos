@@ -24,7 +24,7 @@ namespace SwfParserRuntime {
             return ele;
         }
 
-        public virtual void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent, bool isInUI) {
+        public virtual void Load(Swf swf, DisplayObjectContainer parent, bool isInUI) {
             // 子类重写
             Debug2.Log((TagType)header.type + " Load() 方法未实现");
         }

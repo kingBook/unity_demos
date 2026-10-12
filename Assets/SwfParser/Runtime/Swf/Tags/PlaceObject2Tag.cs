@@ -58,7 +58,7 @@ namespace SwfParserRuntime {
             }*/
         }
 
-        public override void Load(Swf swf, MeshHelperBase meshHelper, DisplayObjectContainer parent, bool isInUI) {
+        public override void Load(Swf swf, DisplayObjectContainer parent, bool isInUI) {
             if (placeFlagHasClipDepth) {
 
             }
@@ -77,7 +77,7 @@ namespace SwfParserRuntime {
             if (placeFlagHasCharacter) {
                 //Debug2.Log("placeObject2Tag.characterId:" + characterId);
                 Tag tag = (Tag)swf.GetCharacterIdTag(characterId);
-                tag.Load(swf, meshHelper, parent, isInUI);
+                tag.Load(swf, parent, isInUI);
                 //Debug2.Log("placeObject2Tag.characterIdTagType:" + (TagType)tag.header.type);
             }
             if (placeFlagMove) {

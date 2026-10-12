@@ -9,7 +9,7 @@ namespace SwfParserRuntime {
         public string[] atlasPaths;
         public RectInfoArray[] rectInfo2Ds;
 
-        public (Texture2D atlas, string atlasPath, RectInfo? rectInfo) GetAtlasData(ushort characterID) {
+        public AtlasData GetAtlasData(ushort characterID) {
             Texture2D atlas = null;
             RectInfo? rectInfo = null;
             string atlasPath = null;
@@ -29,7 +29,11 @@ namespace SwfParserRuntime {
                 }
                 if (isFound) break;
             }
-            return (atlas, atlasPath, rectInfo);
+            return new AtlasData() {
+                atlas = atlas,
+                atlasPath = atlasPath,
+                rectInfo = rectInfo
+            };
         }
 
 

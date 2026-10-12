@@ -20,7 +20,9 @@ namespace SwfParserRuntime {
         public float x;
         public float y;
 
-        protected bool m_isInUI;
+        public bool isInUI { get; protected set; }
+        public Mesh mesh { get; protected set; }
+        public Material material { get; protected set; }
 
         public DisplayObject() {
             alpha = 1;
