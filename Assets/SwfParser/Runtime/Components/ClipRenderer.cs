@@ -4,7 +4,7 @@ using UnityEngine.UI;
 namespace SwfParserRuntime {
 
     [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer)), DisallowMultipleComponent]
-    public class MovieClipRenderer : MonoBehaviour {
+    public class ClipRenderer : MonoBehaviour {
 
         [SerializeField] private Swf m_swf;
         [SerializeField] private string m_symbolClassName;

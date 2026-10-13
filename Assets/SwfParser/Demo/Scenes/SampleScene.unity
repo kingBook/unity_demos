@@ -543,7 +543,7 @@ GameObject:
   - component: {fileID: 1673573241}
   - component: {fileID: 1673573242}
   m_Layer: 5
-  m_Name: MovieClipRendererUI
+  m_Name: ClipRendererUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 1897742488}
   - component: {fileID: 1897742490}
   m_Layer: 0
-  m_Name: MovieClipRenderer
+  m_Name: ClipRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
