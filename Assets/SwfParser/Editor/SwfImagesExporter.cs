@@ -21,16 +21,16 @@ namespace SwfParserEditor {
         /// </summary>
         /// <param name="swfFolderPath"> 绝对路径，如：E:/kingBook/projects/unity_swfParse/Assets </param>
         public AtlasData[] Export(string swfFolderPath) {
-            Stopwatch sw = new ();
+            Stopwatch sw = new();
             sw.Start();
             ImageData[] imageDatas = m_swf.GetImageDatas(true);
             sw.Stop();
             Debug.Log("GetImageDatas passed time:" + sw.ElapsedMilliseconds);
 
             sw.Restart();
-            CreateAtlases(imageDatas, out _, out SubSpriteInfo[][] subSpriteInfo2Ds);
-            // var atlasPaths = WriteImageDatasToDisk(imageDatas, swfFolderPath);
-            // var atlasAssets = ImportAtlasAssets(atlasPaths);
+            CreateAtlases(imageDatas, out _, out SubSpriteInfo[] subSpriteInfos);
+            var atlasPaths = WriteImageDatasToDisk(imageDatas, swfFolderPath);
+            var atlasAssets = ImportAtlasAssets(atlasPaths);
             // var atlasesData = new AtlasesData {
             //     atlasAssets = atlasAssets,
             //     atlasPaths = atlasPaths,
@@ -53,47 +53,28 @@ namespace SwfParserEditor {
             return atlasAssets;
         }
 
-        private void CreateAtlases(ImageData[] imgDatas, out Texture2D[] atlases, out SubSpriteInfo[][] subSpriteInfo2Ds) {
-            // int len = imgDatas.Length;
-            // atlases = ImageDatasToTexture2Ds(imgDatas);
+        private void CreateAtlases(ImageData[] imgDatas, out Texture2D[] atlases, out SubSpriteInfo[] subSpriteInfos) {
             // 图片数据数组 -> Texture2D数组
-            Texture2D[] texture2Ds = imgDatas.Select(imgData => {
+            atlases = imgDatas.Select(imgData => {
                 Texture2D texture2D = new(4, 4);
                 texture2D.LoadImage(imgData.bytes);
                 return texture2D;
             }).ToArray();
 
-            // rectInfo2Ds = new RectInfoArray[len];
-            // for (int i = 0; i < len; i++) {
-            //     var characterID = imgDatas[i].characterID;
-            //     var texture2D = atlases[i];
+            // 子 Sprite 信息
+            int len = imgDatas.Length;
+            subSpriteInfos = new SubSpriteInfo[len];
+            for (int i = 0; i < len; i++) {
+                ushort characterID = imgDatas[i].characterID;
+                Texture2D texture2D = atlases[i];
 
-            //     var rectInfos = new RectInfoArray(1);
-            //     rectInfos[0] = new SubSpriteInfo {
-            //         characterID = characterID,
-            //         rect = new Rect(0, 0, texture2D.width, texture2D.height)
-            //     };
-            //     rectInfo2Ds[i] = rectInfos;
-            // }
-
-            atlases=null;
-            subSpriteInfo2Ds=null;
-        }
-
-        /// <summary>
-        /// 位图数据转换为2d纹理
-        /// </summary>
-        /// <param name="imgDatas"></param>
-        /// <returns></returns>
-        private Texture2D[] ImageDatasToTexture2Ds(ImageData[] imgDatas) {
-            var texture2Ds = new Texture2D[imgDatas.Length];
-            for (int i = 0; i < imgDatas.Length; i++) {
-                var imgData = imgDatas[i];
-                var texture2D = new Texture2D(4, 4);
-                texture2D.LoadImage(imgData.bytes);
-                texture2Ds[i] = texture2D;
+                SubSpriteInfo subSpriteInfo = new() {
+                    characterID = characterID,
+                    rect = new Rect(0, 0, texture2D.width, texture2D.height),
+                    sprite = null // 后面再赋值
+                };
+                subSpriteInfos[i] = subSpriteInfo;
             }
-            return texture2Ds;
         }
 
         /// <summary>
@@ -109,7 +90,7 @@ namespace SwfParserEditor {
                 if (imageData.bytes == null || imageData.bytes.Length <= 0) continue;
                 string extensionName = imageData.type == ImageType.Png ? ".png" : ".jpg";
                 string path = $"{swfFolderPath}/{imageData.characterID}{extensionName}";
-                FileStream fs = new (path, FileMode.Create);
+                FileStream fs = new(path, FileMode.Create);
                 fs.Write(imageData.bytes, 0, imageData.bytes.Length);
                 fs.Close();
                 paths[i] = FileUtil.GetProjectRelativePath(path);
