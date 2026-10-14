@@ -16,7 +16,7 @@ namespace SwfParserEditor {
         public static bool isExportXml = false;
 
         /// <summary> 导出图片选项 </summary>
-        public static ExportImagesOption exportImagesOption = ExportImagesOption.Atlas;
+        public static ExportImagesOption exportImagesOption = ExportImagesOption.OneByOne;
 
         /// <summary> 当导出为图集时，允许的纹理大小上限 </summary>
         public static int exportMaxAtlasSize = 2048;

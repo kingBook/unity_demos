@@ -11,7 +11,7 @@ namespace SwfParserRuntime {
 
         public AtlasData GetAtlasData(ushort characterID) {
             Texture2D atlas = null;
-            RectInfo? rectInfo = null;
+            SubSpriteInfo? rectInfo = null;
             string atlasPath = null;
 
             for (int i = 0, len = rectInfo2Ds.Length; i < len; i++) {
@@ -30,9 +30,9 @@ namespace SwfParserRuntime {
                 if (isFound) break;
             }
             return new AtlasData() {
-                atlas = atlas,
-                atlasPath = atlasPath,
-                rectInfo = rectInfo
+                sourceTex = atlas,
+                path = atlasPath,
+                //subSpriteInfo = rectInfo
             };
         }
 

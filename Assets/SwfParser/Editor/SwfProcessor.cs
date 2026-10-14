@@ -34,23 +34,22 @@ namespace SwfParserEditor {
             }
 
             // =========== 导出位图 ==========================================
-            AtlasesData atlasesData = null;
+            AtlasData[] atlasDatas = null;
             switch (SwfParseConfig.exportImagesOption) {
                 case ExportImagesOption.OneByOne:
                     var swfImagesExporter = new SwfImagesExporter(swf);
-                    atlasesData = swfImagesExporter.Export(swfFolderPath);
+                    atlasDatas = swfImagesExporter.Export(swfFolderPath);
                     break;
                 case ExportImagesOption.Atlas:
                     var swfAtlasesExporter = new SwfAtlasesExporter(swf);
-                    atlasesData = swfAtlasesExporter.Export(swfFolderPath);
+                    atlasDatas = swfAtlasesExporter.Export(swfFolderPath);
                     break;
             }
-            Debug.Log("atlasesData.rectInfo2Ds:" + atlasesData.rectInfo2Ds.Length);
 
             // =========== 导出运行时数据 (xx.swfData) ======================
             if (SwfParseConfig.isExportSwfData) {
                 var swfAssetExporter = new SwfAssetExporter(swf);
-                swfAssetExporter.Export(swfPath, atlasesData);
+                swfAssetExporter.Export(swfPath, atlasDatas);
             }
 
             // ===============================================================

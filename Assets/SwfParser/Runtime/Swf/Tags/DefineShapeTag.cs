@@ -24,12 +24,11 @@ namespace SwfParserRuntime {
             // bitmapId
             FillStyleRecord[] fillStyles = shapes.fillStyles.fillStyles;
             if (fillStyles.Length >= 2) {
-                var fillStyle = fillStyles[1];
-                var type = fillStyle.fillStyleType;
+                FillStyleRecord fillStyle = fillStyles[1];
+                byte type = fillStyle.fillStyleType;
                 if (type == 0x40 || type == 0x41 || type == 0x42 || type == 0x43) {
-                    var atlasData = swf.atlasesData.GetAtlasData(fillStyle.bitmapId);
-                    //Debug2.Log(fillStyle.bitmapMatrix);
-                    var shape = new Shape(atlasData, fillStyle.bitmapMatrix.ToMatrix());
+                    SubSpriteInfo subSpriteInfo = swf.FindSubSpriteInfoInAtlasDatas(fillStyle.bitmapId);
+                    var shape = new Shape(subSpriteInfo, fillStyle.bitmapMatrix.ToMatrix());
                     parent.AddChild(shape);
                 }
             }

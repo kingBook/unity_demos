@@ -3,13 +3,13 @@ namespace SwfParserRuntime {
     [System.Serializable]
     public class RectInfoArray {
 
-        public RectInfo[] rectInfos;
+        public SubSpriteInfo[] rectInfos;
 
         public RectInfoArray(int length) {
-            rectInfos = new RectInfo[length];
+            rectInfos = new SubSpriteInfo[length];
         }
 
-        public RectInfo this[int index] {
+        public SubSpriteInfo this[int index] {
             get { return rectInfos[index]; }
             set { rectInfos[index] = value; }
         }

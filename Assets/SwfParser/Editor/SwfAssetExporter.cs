@@ -19,7 +19,7 @@ namespace SwfParserEditor {
         /// </summary>
         /// <param name="swfPath"> 绝对路径 </param>
         /// <param name="atlasesData"> 图集数据 </param>
-        public void Export(string swfPath, AtlasesData atlasesData) {
+        public void Export(string swfPath, AtlasData[] atlasDatas) {
             Stopwatch sw = new Stopwatch();
             sw.Start();
 
@@ -28,11 +28,11 @@ namespace SwfParserEditor {
             if (File.Exists(swfDataRelativePath)) {
                 var swfAsset = AssetDatabase.LoadAssetAtPath<Swf>(swfDataRelativePath);
                 swfAsset.SetTo(m_swf);
-                swfAsset.SetAtlasesData(atlasesData);
+                swfAsset.SetAtlasDatas(atlasDatas);
                 EditorUtility.SetDirty(swfAsset);
                 AssetDatabase.SaveAssetIfDirty(swfAsset);
             } else {
-                m_swf.SetAtlasesData(atlasesData);
+                m_swf.SetAtlasDatas(atlasDatas);
                 AssetDatabase.CreateAsset(m_swf, swfDataRelativePath);
             }
 

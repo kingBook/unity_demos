@@ -1,6 +1,7 @@
 using SwfParserRuntime;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
@@ -19,29 +20,29 @@ namespace SwfParserEditor {
         /// 导出位图数据
         /// </summary>
         /// <param name="swfFolderPath"> 绝对路径，如：E:/kingBook/projects/unity_swfParse/Assets </param>
-        public AtlasesData Export(string swfFolderPath) {
-            Stopwatch sw = new Stopwatch();
+        public AtlasData[] Export(string swfFolderPath) {
+            Stopwatch sw = new ();
             sw.Start();
             ImageData[] imageDatas = m_swf.GetImageDatas(true);
             sw.Stop();
             Debug.Log("GetImageDatas passed time:" + sw.ElapsedMilliseconds);
 
             sw.Restart();
-            CreateAtlases(imageDatas, out _, out RectInfoArray[] rectInfo2Ds);
-            var atlasPaths = SaveImageDatas(imageDatas, swfFolderPath);
-            var atlasAssets = CreateAtlasAssets(atlasPaths);
-            var atlasesData = new AtlasesData {
-                atlasAssets = atlasAssets,
-                atlasPaths = atlasPaths,
-                rectInfo2Ds = rectInfo2Ds
-            };
+            CreateAtlases(imageDatas, out _, out SubSpriteInfo[][] subSpriteInfo2Ds);
+            // var atlasPaths = WriteImageDatasToDisk(imageDatas, swfFolderPath);
+            // var atlasAssets = ImportAtlasAssets(atlasPaths);
+            // var atlasesData = new AtlasesData {
+            //     atlasAssets = atlasAssets,
+            //     atlasPaths = atlasPaths,
+            //     rectInfo2Ds = rectInfo2Ds
+            // };
             sw.Stop();
             Debug.Log("Save image datas passed time:" + sw.ElapsedMilliseconds);
 
-            return atlasesData;
+            return null;
         }
 
-        private Texture2D[] CreateAtlasAssets(string[] atlasPaths) {
+        private Texture2D[] ImportAtlasAssets(string[] atlasPaths) {
             int len = atlasPaths.Length;
             var atlasAssets = new Texture2D[len];
             for (int i = 0; i < len; i++) {
@@ -52,24 +53,38 @@ namespace SwfParserEditor {
             return atlasAssets;
         }
 
-        private void CreateAtlases(ImageData[] imgDatas, out Texture2D[] atlases, out RectInfoArray[] rectInfo2Ds) {
-            int len = imgDatas.Length;
-            atlases = ImageDatasToTexture2Ds(imgDatas);
+        private void CreateAtlases(ImageData[] imgDatas, out Texture2D[] atlases, out SubSpriteInfo[][] subSpriteInfo2Ds) {
+            // int len = imgDatas.Length;
+            // atlases = ImageDatasToTexture2Ds(imgDatas);
+            // 图片数据数组 -> Texture2D数组
+            Texture2D[] texture2Ds = imgDatas.Select(imgData => {
+                Texture2D texture2D = new(4, 4);
+                texture2D.LoadImage(imgData.bytes);
+                return texture2D;
+            }).ToArray();
 
-            rectInfo2Ds = new RectInfoArray[len];
-            for (int i = 0; i < len; i++) {
-                var characterID = imgDatas[i].characterID;
-                var texture2D = atlases[i];
+            // rectInfo2Ds = new RectInfoArray[len];
+            // for (int i = 0; i < len; i++) {
+            //     var characterID = imgDatas[i].characterID;
+            //     var texture2D = atlases[i];
 
-                var rectInfos = new RectInfoArray(1);
-                rectInfos[0] = new RectInfo {
-                    characterID = characterID,
-                    rect = new Rect(0, 0, texture2D.width, texture2D.height)
-                };
-                rectInfo2Ds[i] = rectInfos;
-            }
+            //     var rectInfos = new RectInfoArray(1);
+            //     rectInfos[0] = new SubSpriteInfo {
+            //         characterID = characterID,
+            //         rect = new Rect(0, 0, texture2D.width, texture2D.height)
+            //     };
+            //     rectInfo2Ds[i] = rectInfos;
+            // }
+
+            atlases=null;
+            subSpriteInfo2Ds=null;
         }
 
+        /// <summary>
+        /// 位图数据转换为2d纹理
+        /// </summary>
+        /// <param name="imgDatas"></param>
+        /// <returns></returns>
         private Texture2D[] ImageDatasToTexture2Ds(ImageData[] imgDatas) {
             var texture2Ds = new Texture2D[imgDatas.Length];
             for (int i = 0; i < imgDatas.Length; i++) {
@@ -85,8 +100,8 @@ namespace SwfParserEditor {
         /// 以png或jpg，保存位图数据到本地（如果 bytes==null 或 bytes.length<=0 将取消）
         /// </summary>
         /// <param name="imageDatas"> 位图数据 </param>
-        /// <param name="swfFolderPath"> 绝对路径，如：E:/kingBook/projects/unity_swfParse/Assets </param>
-        private string[] SaveImageDatas(ImageData[] imageDatas, string swfFolderPath) {
+        /// <param name="swfFolderPath"> 绝对路径，如：E:/projects/unity_swfParse/Assets/test_export </param>
+        private string[] WriteImageDatasToDisk(ImageData[] imageDatas, string swfFolderPath) {
             var len = imageDatas.Length;
             var paths = new string[len];
             for (int i = 0; i < len; i++) {
@@ -94,7 +109,7 @@ namespace SwfParserEditor {
                 if (imageData.bytes == null || imageData.bytes.Length <= 0) continue;
                 string extensionName = imageData.type == ImageType.Png ? ".png" : ".jpg";
                 string path = $"{swfFolderPath}/{imageData.characterID}{extensionName}";
-                FileStream fs = new FileStream(path, FileMode.Create);
+                FileStream fs = new (path, FileMode.Create);
                 fs.Write(imageData.bytes, 0, imageData.bytes.Length);
                 fs.Close();
                 paths[i] = FileUtil.GetProjectRelativePath(path);

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Xml;
+using System.Linq;
 
 namespace SwfParserRuntime {
 
@@ -16,7 +17,7 @@ namespace SwfParserRuntime {
         public List<ushort> usedCharacterIds;
         [SerializeReference]
         public List<ICharacterIdTag> usedCharacterIdTags;
-        public AtlasesData atlasesData;
+        public AtlasData[] atlasDatas;
         #endregion
 
         /// <summary>
@@ -46,11 +47,11 @@ namespace SwfParserRuntime {
             symbolClassTags = target.symbolClassTags;
             usedCharacterIds = target.usedCharacterIds;
             usedCharacterIdTags = target.usedCharacterIdTags;
-            atlasesData = target.atlasesData;
+            atlasDatas = target.atlasDatas;
         }
 
-        public void SetAtlasesData(AtlasesData value) {
-            atlasesData = value;
+        public void SetAtlasDatas(AtlasData[] value) {
+            atlasDatas = value;
         }
 
         /// <summary>
@@ -224,6 +225,20 @@ namespace SwfParserRuntime {
                 }
             }
             return imageDatas.ToArray();
+        }
+
+        /// <summary>
+        /// 从 Swf 的所有图集数据中，查找指定 characterID 的子 Sprite 信息
+        /// </summary>
+        /// <param name="characterID">  </param>
+        /// <returns></returns>
+        public SubSpriteInfo FindSubSpriteInfoInAtlasDatas(ushort characterID) {
+            IEnumerable<SubSpriteInfo> quary = atlasDatas.SelectMany(item => item.subSpriteInfos);
+            IEnumerable<SubSpriteInfo> quary2 = quary.Where(item => item.characterID == characterID);
+            int count = quary2.Count();
+            if (count == 0) Debug.LogWarning($"No SubSpriteInfo found in atlasDatas for characterID {characterID}.");
+            if (count > 1) Debug.LogWarning($"Multiple SubSpriteInfo entries found in atlasDatas for characterID {characterID}; returning the first match.");
+            return quary2.First();
         }
 
 
