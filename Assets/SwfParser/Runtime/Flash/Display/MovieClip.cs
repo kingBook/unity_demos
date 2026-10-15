@@ -5,14 +5,17 @@ using UnityEngine.PlayerLoop;
 
 namespace SwfParserRuntime {
 
+    // [SerializeField] private Swf m_swf;
+    // [SerializeField] private string m_symbolClassName;
+
     public class MovieClip : Sprite {
 
-        public int currentFrame;
-        public string currentFrameLabel;
-        public string currentLabel;
-        public string[] currentLabels;
-        public bool isPlaying;
-        public int totalFrames;
+        public int currentFrame { get; set; }
+        public string currentFrameLabel{ get; set; }
+        public string currentLabel{ get; set; }
+        public string[] currentLabels{ get; set; }
+        public bool isPlaying{ get; set; }
+        public int totalFrames{ get; set; }
 
         //
         private Swf m_swf;

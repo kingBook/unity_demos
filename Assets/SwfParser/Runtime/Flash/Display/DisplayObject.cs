@@ -2,29 +2,29 @@ using UnityEngine;
 
 namespace SwfParserRuntime {
 
-    public abstract class DisplayObject {
+    public abstract class DisplayObject: MonoBehaviour {
 
         //
-        public float alpha;
+        public float alpha{ get; set; }
         //public filters
         //public DisplayObject mask;
-        public string name;
-        public DisplayObjectContainer parent;
-        public float rotation;
-        public float scaleX;
-        public float scaleY;
-        public Transform transform;
-        public bool visible;
-        public float width;
-        public float height;
-        public float x;
-        public float y;
-
+        //public string name;
+        public DisplayObjectContainer parent{ get; set; }
+        public float rotation{ get; set; }
+        public float scaleX{ get; set; }
+        public float scaleY{ get; set; }
+        //public Transform transform;
+        public bool visible{ get; set; }
+        public float width{ get; set; }
+        public float height{ get; set; }
+        public float x{ get; set; }
+        public float y{ get; set; }
+        
         public bool isInUI { get; protected set; }
 
         public DisplayObject() {
             alpha = 1;
-            transform = new Transform();
+            //transform = new Transform();
             visible = true;
 
             rotation = 0;

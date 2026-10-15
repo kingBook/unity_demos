@@ -15,9 +15,11 @@ MonoBehaviour:
   symbolClassTags:
   - header:
       type: 76
-      length: 67
-    numSymbols: 5
+      length: 79
+    numSymbols: 6
     symbols:
+    - tagId: 29
+      name: _MulSubMc
     - tagId: 20
       name: _MultipleBitmap
     - tagId: 17
@@ -28,26 +30,35 @@ MonoBehaviour:
       name: _TextDynamic
     - tagId: 3
       name: _TextStatic
-  usedCharacterIds: 030002000500040006000700080009000a000b000c000d000e000f0010001100120013001400
+  usedCharacterIds: 030002000500040006000700080009000a000b000c000d000e000f0010001100120013001400150016001700180019001a001b001c001d00
   usedCharacterIdTags:
-  - rid: 1477968271021703320
-  - rid: 1477968271021703321
-  - rid: 1477968271021703322
-  - rid: 1477968271021703323
-  - rid: 1477968271021703324
-  - rid: 1477968271021703325
-  - rid: 1477968271021703326
-  - rid: 1477968271021703327
-  - rid: 1477968271021703328
-  - rid: 1477968271021703329
-  - rid: 1477968271021703330
-  - rid: 1477968271021703331
-  - rid: 1477968271021703332
-  - rid: 1477968271021703333
-  - rid: 1477968271021703334
-  - rid: 1477968271021703335
-  - rid: 1477968271021703336
-  - rid: 1477968271021703337
+  - rid: 1477968271021703414
+  - rid: 1477968271021703415
+  - rid: 1477968271021703416
+  - rid: 1477968271021703417
+  - rid: 1477968271021703418
+  - rid: 1477968271021703419
+  - rid: 1477968271021703420
+  - rid: 1477968271021703421
+  - rid: 1477968271021703422
+  - rid: 1477968271021703423
+  - rid: 1477968271021703424
+  - rid: 1477968271021703425
+  - rid: 1477968271021703426
+  - rid: 1477968271021703427
+  - rid: 1477968271021703428
+  - rid: 1477968271021703429
+  - rid: 1477968271021703430
+  - rid: 1477968271021703431
+  - rid: 1477968271021703432
+  - rid: 1477968271021703433
+  - rid: 1477968271021703434
+  - rid: 1477968271021703435
+  - rid: 1477968271021703436
+  - rid: 1477968271021703437
+  - rid: 1477968271021703438
+  - rid: 1477968271021703439
+  - rid: 1477968271021703440
   atlasDatas:
   - path: Assets/SwfParser/Demo/swfs/test_export/0.png
     sourceTex: {fileID: 2800000, guid: 9e61a987b03701d43833aeb602c78f20, type: 3}
@@ -55,8 +66,8 @@ MonoBehaviour:
     - characterID: 6
       rect:
         serializedVersion: 2
-        x: 96
-        y: 245
+        x: 295
+        y: 105
         width: 152
         height: 37
       sprite: {fileID: 6967745887157389618, guid: 9e61a987b03701d43833aeb602c78f20,
@@ -73,8 +84,8 @@ MonoBehaviour:
     - characterID: 11
       rect:
         serializedVersion: 2
-        x: 106
-        y: 128
+        x: 295
+        y: 0
         width: 95
         height: 101
       sprite: {fileID: 6346318911325233748, guid: 9e61a987b03701d43833aeb602c78f20,
@@ -82,8 +93,8 @@ MonoBehaviour:
     - characterID: 14
       rect:
         serializedVersion: 2
-        x: 0
-        y: 245
+        x: 199
+        y: 0
         width: 92
         height: 114
       sprite: {fileID: 2450565909728410856, guid: 9e61a987b03701d43833aeb602c78f20,
@@ -97,10 +108,28 @@ MonoBehaviour:
         height: 124
       sprite: {fileID: 5661049957185019681, guid: 9e61a987b03701d43833aeb602c78f20,
         type: 3}
+    - characterID: 21
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 118
+        width: 92
+        height: 88
+      sprite: {fileID: 2185498278340178504, guid: 9e61a987b03701d43833aeb602c78f20,
+        type: 3}
+    - characterID: 25
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 128
+        width: 82
+        height: 82
+      sprite: {fileID: 8914089594741642868, guid: 9e61a987b03701d43833aeb602c78f20,
+        type: 3}
   references:
     version: 2
     RefIds:
-    - rid: 1477968271021703320
+    - rid: 1477968271021703414
       type: {class: DefineTextTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -108,10 +137,10 @@ MonoBehaviour:
           length: 34
         characterID: 2
         textBounds:
-          xMin: 115
-          xMax: 8881
-          yMin: 225
-          yMax: 1675
+          xMin: 59
+          xMax: 8722
+          yMin: 320
+          yMax: 2197
         textMatrix:
           hasScale: 0
           nScaleBits: 0
@@ -128,7 +157,7 @@ MonoBehaviour:
         advanceBits: 3
         textRecords: []
         endOfRecordsFlag: 0
-    - rid: 1477968271021703321
+    - rid: 1477968271021703415
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -137,10 +166,10 @@ MonoBehaviour:
         spriteId: 3
         frameCount: 1
         controlTags:
-        - rid: 1477968271021703338
-        - rid: 1477968271021703339
-        - rid: 1477968271021703340
-    - rid: 1477968271021703322
+        - rid: 1477968271021703441
+        - rid: 1477968271021703442
+        - rid: 1477968271021703443
+    - rid: 1477968271021703416
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -149,10 +178,10 @@ MonoBehaviour:
         spriteId: 5
         frameCount: 1
         controlTags:
-        - rid: 1477968271021703341
-        - rid: 1477968271021703342
-        - rid: 1477968271021703343
-    - rid: 1477968271021703323
+        - rid: 1477968271021703444
+        - rid: 1477968271021703445
+        - rid: 1477968271021703446
+    - rid: 1477968271021703417
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -163,7 +192,7 @@ MonoBehaviour:
         bitmapWidth: 152
         bitmapHeight: 37
         bitmapColorTableSize: 0
-    - rid: 1477968271021703324
+    - rid: 1477968271021703418
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -237,7 +266,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968271021703325
+    - rid: 1477968271021703419
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -246,10 +275,10 @@ MonoBehaviour:
         spriteId: 8
         frameCount: 1
         controlTags:
-        - rid: 1477968271021703344
-        - rid: 1477968271021703345
-        - rid: 1477968271021703346
-    - rid: 1477968271021703326
+        - rid: 1477968271021703447
+        - rid: 1477968271021703448
+        - rid: 1477968271021703449
+    - rid: 1477968271021703420
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -260,7 +289,7 @@ MonoBehaviour:
         bitmapWidth: 102
         bitmapHeight: 113
         bitmapColorTableSize: 0
-    - rid: 1477968271021703327
+    - rid: 1477968271021703421
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -334,7 +363,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968271021703328
+    - rid: 1477968271021703422
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -345,7 +374,7 @@ MonoBehaviour:
         bitmapWidth: 95
         bitmapHeight: 101
         bitmapColorTableSize: 0
-    - rid: 1477968271021703329
+    - rid: 1477968271021703423
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -419,7 +448,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968271021703330
+    - rid: 1477968271021703424
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -428,10 +457,10 @@ MonoBehaviour:
         spriteId: 13
         frameCount: 1
         controlTags:
-        - rid: 1477968271021703347
-        - rid: 1477968271021703348
-        - rid: 1477968271021703349
-    - rid: 1477968271021703331
+        - rid: 1477968271021703450
+        - rid: 1477968271021703451
+        - rid: 1477968271021703452
+    - rid: 1477968271021703425
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -442,7 +471,7 @@ MonoBehaviour:
         bitmapWidth: 92
         bitmapHeight: 114
         bitmapColorTableSize: 0
-    - rid: 1477968271021703332
+    - rid: 1477968271021703426
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -516,7 +545,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968271021703333
+    - rid: 1477968271021703427
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -525,10 +554,10 @@ MonoBehaviour:
         spriteId: 16
         frameCount: 1
         controlTags:
-        - rid: 1477968271021703350
-        - rid: 1477968271021703351
-        - rid: 1477968271021703352
-    - rid: 1477968271021703334
+        - rid: 1477968271021703453
+        - rid: 1477968271021703454
+        - rid: 1477968271021703455
+    - rid: 1477968271021703428
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -537,14 +566,14 @@ MonoBehaviour:
         spriteId: 17
         frameCount: 2
         controlTags:
-        - rid: 1477968271021703353
-        - rid: 1477968271021703354
-        - rid: 1477968271021703355
-        - rid: 1477968271021703356
-        - rid: 1477968271021703357
-        - rid: 1477968271021703358
-        - rid: 1477968271021703359
-    - rid: 1477968271021703335
+        - rid: 1477968271021703456
+        - rid: 1477968271021703457
+        - rid: 1477968271021703458
+        - rid: 1477968271021703459
+        - rid: 1477968271021703460
+        - rid: 1477968271021703461
+        - rid: 1477968271021703462
+    - rid: 1477968271021703429
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -555,7 +584,7 @@ MonoBehaviour:
         bitmapWidth: 195
         bitmapHeight: 124
         bitmapColorTableSize: 0
-    - rid: 1477968271021703336
+    - rid: 1477968271021703430
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -629,7 +658,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968271021703337
+    - rid: 1477968271021703431
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -638,10 +667,357 @@ MonoBehaviour:
         spriteId: 20
         frameCount: 1
         controlTags:
-        - rid: 1477968271021703360
-        - rid: 1477968271021703361
-        - rid: 1477968271021703362
-    - rid: 1477968271021703338
+        - rid: 1477968271021703463
+        - rid: 1477968271021703464
+        - rid: 1477968271021703465
+    - rid: 1477968271021703432
+      type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 36
+          length: 945
+        characterID: 21
+        bitmapFormat: 5
+        bitmapWidth: 92
+        bitmapHeight: 88
+        bitmapColorTableSize: 0
+    - rid: 1477968271021703433
+      type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 2
+          length: 51
+        shapeId: 22
+        shapeBounds:
+          xMin: -912
+          xMax: 923
+          yMin: -868
+          yMax: 884
+        shapes:
+          fillStyles:
+            fillStyleCount: 2
+            fillStyleCountExtended: 0
+            fillStyles:
+            - fillStyleType: 65
+              gradientMatrix:
+                hasScale: 0
+                nScaleBits: 0
+                scaleX: 0
+                scaleY: 0
+                hasRotate: 0
+                nRotateBits: 0
+                rotateSkew0: 0
+                rotateSkew1: 0
+                nTranslateBits: 0
+                translateX: 0
+                translateY: 0
+              bitmapId: 65535
+              bitmapMatrix:
+                hasScale: 1
+                nScaleBits: 22
+                scaleX: 20
+                scaleY: 20
+                hasRotate: 0
+                nRotateBits: 0
+                rotateSkew0: 0
+                rotateSkew1: 0
+                nTranslateBits: 0
+                translateX: 0
+                translateY: 0
+            - fillStyleType: 65
+              gradientMatrix:
+                hasScale: 0
+                nScaleBits: 0
+                scaleX: 0
+                scaleY: 0
+                hasRotate: 0
+                nRotateBits: 0
+                rotateSkew0: 0
+                rotateSkew1: 0
+                nTranslateBits: 0
+                translateX: 0
+                translateY: 0
+              bitmapId: 21
+              bitmapMatrix:
+                hasScale: 1
+                nScaleBits: 22
+                scaleX: 19
+                scaleY: 19
+                hasRotate: 0
+                nRotateBits: 0
+                rotateSkew0: 0
+                rotateSkew1: 0
+                nTranslateBits: 11
+                translateX: -912
+                translateY: -868
+          lineStyles:
+            lineStyleCount: 0
+            lineStyleCountExtended: 0
+          numFillBits: 2
+          numLineBits: 0
+    - rid: 1477968271021703434
+      type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 39
+          length: 16
+        spriteId: 23
+        frameCount: 1
+        controlTags:
+        - rid: 1477968271021703466
+        - rid: 1477968271021703467
+        - rid: 1477968271021703468
+    - rid: 1477968271021703435
+      type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 39
+          length: 524
+        spriteId: 24
+        frameCount: 30
+        controlTags:
+        - rid: 1477968271021703469
+        - rid: 1477968271021703470
+        - rid: 1477968271021703471
+        - rid: 1477968271021703472
+        - rid: 1477968271021703473
+        - rid: 1477968271021703474
+        - rid: 1477968271021703475
+        - rid: 1477968271021703476
+        - rid: 1477968271021703477
+        - rid: 1477968271021703478
+        - rid: 1477968271021703479
+        - rid: 1477968271021703480
+        - rid: 1477968271021703481
+        - rid: 1477968271021703482
+        - rid: 1477968271021703483
+        - rid: 1477968271021703484
+        - rid: 1477968271021703485
+        - rid: 1477968271021703486
+        - rid: 1477968271021703487
+        - rid: 1477968271021703488
+        - rid: 1477968271021703489
+        - rid: 1477968271021703490
+        - rid: 1477968271021703491
+        - rid: 1477968271021703492
+        - rid: 1477968271021703493
+        - rid: 1477968271021703494
+        - rid: 1477968271021703495
+        - rid: 1477968271021703496
+        - rid: 1477968271021703497
+        - rid: 1477968271021703498
+        - rid: 1477968271021703499
+        - rid: 1477968271021703500
+        - rid: 1477968271021703501
+        - rid: 1477968271021703502
+        - rid: 1477968271021703503
+        - rid: 1477968271021703504
+        - rid: 1477968271021703505
+        - rid: 1477968271021703506
+        - rid: 1477968271021703507
+        - rid: 1477968271021703508
+        - rid: 1477968271021703509
+        - rid: 1477968271021703510
+        - rid: 1477968271021703511
+        - rid: 1477968271021703512
+        - rid: 1477968271021703513
+        - rid: 1477968271021703514
+        - rid: 1477968271021703515
+        - rid: 1477968271021703516
+        - rid: 1477968271021703517
+        - rid: 1477968271021703518
+        - rid: 1477968271021703519
+        - rid: 1477968271021703520
+        - rid: 1477968271021703521
+        - rid: 1477968271021703522
+        - rid: 1477968271021703523
+        - rid: 1477968271021703524
+        - rid: 1477968271021703525
+        - rid: 1477968271021703526
+        - rid: 1477968271021703527
+        - rid: 1477968271021703528
+        - rid: 1477968271021703529
+    - rid: 1477968271021703436
+      type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 36
+          length: 151
+        characterID: 25
+        bitmapFormat: 5
+        bitmapWidth: 82
+        bitmapHeight: 82
+        bitmapColorTableSize: 0
+    - rid: 1477968271021703437
+      type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 2
+          length: 51
+        shapeId: 26
+        shapeBounds:
+          xMin: -820
+          xMax: 820
+          yMin: -820
+          yMax: 820
+        shapes:
+          fillStyles:
+            fillStyleCount: 2
+            fillStyleCountExtended: 0
+            fillStyles:
+            - fillStyleType: 65
+              gradientMatrix:
+                hasScale: 0
+                nScaleBits: 0
+                scaleX: 0
+                scaleY: 0
+                hasRotate: 0
+                nRotateBits: 0
+                rotateSkew0: 0
+                rotateSkew1: 0
+                nTranslateBits: 0
+                translateX: 0
+                translateY: 0
+              bitmapId: 65535
+              bitmapMatrix:
+                hasScale: 1
+                nScaleBits: 22
+                scaleX: 20
+                scaleY: 20
+                hasRotate: 0
+                nRotateBits: 0
+                rotateSkew0: 0
+                rotateSkew1: 0
+                nTranslateBits: 0
+                translateX: 0
+                translateY: 0
+            - fillStyleType: 65
+              gradientMatrix:
+                hasScale: 0
+                nScaleBits: 0
+                scaleX: 0
+                scaleY: 0
+                hasRotate: 0
+                nRotateBits: 0
+                rotateSkew0: 0
+                rotateSkew1: 0
+                nTranslateBits: 0
+                translateX: 0
+                translateY: 0
+              bitmapId: 25
+              bitmapMatrix:
+                hasScale: 1
+                nScaleBits: 22
+                scaleX: 20
+                scaleY: 20
+                hasRotate: 0
+                nRotateBits: 0
+                rotateSkew0: 0
+                rotateSkew1: 0
+                nTranslateBits: 11
+                translateX: -820
+                translateY: -820
+          lineStyles:
+            lineStyleCount: 0
+            lineStyleCountExtended: 0
+          numFillBits: 2
+          numLineBits: 0
+    - rid: 1477968271021703438
+      type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 39
+          length: 16
+        spriteId: 27
+        frameCount: 1
+        controlTags:
+        - rid: 1477968271021703530
+        - rid: 1477968271021703531
+        - rid: 1477968271021703532
+    - rid: 1477968271021703439
+      type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 39
+          length: 524
+        spriteId: 28
+        frameCount: 30
+        controlTags:
+        - rid: 1477968271021703533
+        - rid: 1477968271021703534
+        - rid: 1477968271021703535
+        - rid: 1477968271021703536
+        - rid: 1477968271021703537
+        - rid: 1477968271021703538
+        - rid: 1477968271021703539
+        - rid: 1477968271021703540
+        - rid: 1477968271021703541
+        - rid: 1477968271021703542
+        - rid: 1477968271021703543
+        - rid: 1477968271021703544
+        - rid: 1477968271021703545
+        - rid: 1477968271021703546
+        - rid: 1477968271021703547
+        - rid: 1477968271021703548
+        - rid: 1477968271021703549
+        - rid: 1477968271021703550
+        - rid: 1477968271021703551
+        - rid: 1477968271021703552
+        - rid: 1477968271021703553
+        - rid: 1477968271021703554
+        - rid: 1477968271021703555
+        - rid: 1477968271021703556
+        - rid: 1477968271021703557
+        - rid: 1477968271021703558
+        - rid: 1477968271021703559
+        - rid: 1477968271021703560
+        - rid: 1477968271021703561
+        - rid: 1477968271021703562
+        - rid: 1477968271021703563
+        - rid: 1477968271021703564
+        - rid: 1477968271021703565
+        - rid: 1477968271021703566
+        - rid: 1477968271021703567
+        - rid: 1477968271021703568
+        - rid: 1477968271021703569
+        - rid: 1477968271021703570
+        - rid: 1477968271021703571
+        - rid: 1477968271021703572
+        - rid: 1477968271021703573
+        - rid: 1477968271021703574
+        - rid: 1477968271021703575
+        - rid: 1477968271021703576
+        - rid: 1477968271021703577
+        - rid: 1477968271021703578
+        - rid: 1477968271021703579
+        - rid: 1477968271021703580
+        - rid: 1477968271021703581
+        - rid: 1477968271021703582
+        - rid: 1477968271021703583
+        - rid: 1477968271021703584
+        - rid: 1477968271021703585
+        - rid: 1477968271021703586
+        - rid: 1477968271021703587
+        - rid: 1477968271021703588
+        - rid: 1477968271021703589
+        - rid: 1477968271021703590
+        - rid: 1477968271021703591
+        - rid: 1477968271021703592
+        - rid: 1477968271021703593
+    - rid: 1477968271021703440
+      type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 39
+          length: 30
+        spriteId: 29
+        frameCount: 1
+        controlTags:
+        - rid: 1477968271021703594
+        - rid: 1477968271021703595
+        - rid: 1477968271021703596
+        - rid: 1477968271021703597
+    - rid: 1477968271021703441
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -684,19 +1060,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968271021703339
+    - rid: 1477968271021703442
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968271021703340
+    - rid: 1477968271021703443
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968271021703341
+    - rid: 1477968271021703444
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -739,19 +1115,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968271021703342
+    - rid: 1477968271021703445
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968271021703343
+    - rid: 1477968271021703446
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968271021703344
+    - rid: 1477968271021703447
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -794,19 +1170,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968271021703345
+    - rid: 1477968271021703448
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968271021703346
+    - rid: 1477968271021703449
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968271021703347
+    - rid: 1477968271021703450
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -849,19 +1225,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968271021703348
+    - rid: 1477968271021703451
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968271021703349
+    - rid: 1477968271021703452
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968271021703350
+    - rid: 1477968271021703453
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -904,19 +1280,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968271021703351
+    - rid: 1477968271021703454
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968271021703352
+    - rid: 1477968271021703455
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968271021703353
+    - rid: 1477968271021703456
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -959,7 +1335,7 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968271021703354
+    - rid: 1477968271021703457
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -1002,20 +1378,20 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968271021703355
+    - rid: 1477968271021703458
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968271021703356
+    - rid: 1477968271021703459
       type: {class: RemoveObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 28
           length: 2
         depth: 1
-    - rid: 1477968271021703357
+    - rid: 1477968271021703460
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -1058,19 +1434,19 @@ MonoBehaviour:
         ratio: 1
         name: 
         clipDepth: 0
-    - rid: 1477968271021703358
+    - rid: 1477968271021703461
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968271021703359
+    - rid: 1477968271021703462
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968271021703360
+    - rid: 1477968271021703463
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -1113,13 +1489,3173 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968271021703361
+    - rid: 1477968271021703464
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968271021703362
+    - rid: 1477968271021703465
+      type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 0
+          length: 0
+    - rid: 1477968271021703466
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 6
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 1
+        placeFlagMove: 0
+        depth: 1
+        characterId: 22
+        matrix:
+          hasScale: 0
+          nScaleBits: 0
+          scaleX: 1
+          scaleY: 1
+          hasRotate: 0
+          nRotateBits: 0
+          rotateSkew0: 0
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703467
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703468
+      type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 0
+          length: 0
+    - rid: 1477968271021703469
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 6
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 1
+        placeFlagMove: 0
+        depth: 1
+        characterId: 23
+        matrix:
+          hasScale: 0
+          nScaleBits: 0
+          scaleX: 1
+          scaleY: 1
+          hasRotate: 0
+          nRotateBits: 0
+          rotateSkew0: 0
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703470
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703471
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 15
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703472
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703473
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 16
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703474
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703475
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703476
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703477
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703478
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703479
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703480
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703481
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703482
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703483
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 13
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 13
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703484
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703485
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 15
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703486
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703487
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703488
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703489
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703490
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703491
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703492
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703493
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703494
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703495
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 16
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703496
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703497
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 13
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 14
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703498
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703499
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 13
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 14
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703500
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703501
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 16
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703502
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703503
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703504
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703505
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703506
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703507
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703508
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703509
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703510
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703511
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 15
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703512
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703513
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 13
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 13
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703514
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703515
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703516
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703517
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703518
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703519
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703520
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703521
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703522
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703523
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 16
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703524
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703525
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 15
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703526
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703527
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 4
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 0
+          nScaleBits: 0
+          scaleX: 1
+          scaleY: 1
+          hasRotate: 0
+          nRotateBits: 0
+          rotateSkew0: 0
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703528
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703529
+      type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 0
+          length: 0
+    - rid: 1477968271021703530
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 6
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 1
+        placeFlagMove: 0
+        depth: 1
+        characterId: 26
+        matrix:
+          hasScale: 0
+          nScaleBits: 0
+          scaleX: 1
+          scaleY: 1
+          hasRotate: 0
+          nRotateBits: 0
+          rotateSkew0: 0
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703531
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703532
+      type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 0
+          length: 0
+    - rid: 1477968271021703533
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 6
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 1
+        placeFlagMove: 0
+        depth: 1
+        characterId: 27
+        matrix:
+          hasScale: 0
+          nScaleBits: 0
+          scaleX: 1
+          scaleY: 1
+          hasRotate: 0
+          nRotateBits: 0
+          rotateSkew0: 0
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703534
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703535
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 15
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703536
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703537
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 16
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703538
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703539
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703540
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703541
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703542
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703543
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703544
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703545
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703546
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703547
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 13
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 13
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703548
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703549
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 15
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703550
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703551
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703552
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703553
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703554
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703555
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703556
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703557
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703558
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703559
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 16
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703560
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703561
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 13
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 14
+          rotateSkew0: 0
+          rotateSkew1: -1
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703562
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703563
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 13
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 14
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703564
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703565
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 16
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703566
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703567
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703568
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703569
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703570
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703571
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703572
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703573
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703574
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703575
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 15
+          scaleX: -1
+          scaleY: -1
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703576
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703577
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 13
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 13
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703578
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703579
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703580
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703581
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 16
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703582
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703583
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703584
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703585
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 17
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703586
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703587
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 16
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703588
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703589
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 14
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 1
+          nScaleBits: 17
+          scaleX: 0
+          scaleY: 0
+          hasRotate: 1
+          nRotateBits: 15
+          rotateSkew0: -1
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703590
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703591
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 4
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 0
+        placeFlagMove: 1
+        depth: 1
+        characterId: 0
+        matrix:
+          hasScale: 0
+          nScaleBits: 0
+          scaleX: 1
+          scaleY: 1
+          hasRotate: 0
+          nRotateBits: 0
+          rotateSkew0: 0
+          rotateSkew1: 0
+          nTranslateBits: 0
+          translateX: 0
+          translateY: 0
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703592
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703593
+      type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 0
+          length: 0
+    - rid: 1477968271021703594
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 9
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 1
+        placeFlagMove: 0
+        depth: 1
+        characterId: 24
+        matrix:
+          hasScale: 0
+          nScaleBits: 0
+          scaleX: 1
+          scaleY: 1
+          hasRotate: 0
+          nRotateBits: 0
+          rotateSkew0: 0
+          rotateSkew1: 0
+          nTranslateBits: 12
+          translateX: -1441
+          translateY: -112
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703595
+      type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 26
+          length: 9
+        placeFlagHasClipActions: 0
+        placeFlagHasClipDepth: 0
+        placeFlagHasName: 0
+        placeFlagHasRatio: 0
+        placeFlagHasColorTransform: 0
+        placeFlagHasMatrix: 1
+        placeFlagHasCharacter: 1
+        placeFlagMove: 0
+        depth: 3
+        characterId: 28
+        matrix:
+          hasScale: 0
+          nScaleBits: 0
+          scaleX: 1
+          scaleY: 1
+          hasRotate: 0
+          nRotateBits: 0
+          rotateSkew0: 0
+          rotateSkew1: 0
+          nTranslateBits: 12
+          translateX: 1539
+          translateY: 168
+        colorTransform:
+          hasAddTerms: 0
+          hasMultTerms: 0
+          nBits: 0
+          redMultTerm: 0
+          greenMultTerm: 0
+          blueMultTerm: 0
+          alphaMultTerm: 0
+          redAddTerm: 0
+          greenAddTerm: 0
+          blueAddTerm: 0
+          alphaAddTerm: 0
+        ratio: 0
+        name: 
+        clipDepth: 0
+    - rid: 1477968271021703596
+      type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
+      data:
+        header:
+          type: 1
+          length: 0
+    - rid: 1477968271021703597
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
