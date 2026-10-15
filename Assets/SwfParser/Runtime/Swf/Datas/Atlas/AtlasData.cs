@@ -2,9 +2,7 @@ using UnityEngine;
 
 namespace SwfParserRuntime {
 
-    /// <summary>
-    /// 单张图集数据
-    /// </summary>
+    /// <summary> 单张图集数据 </summary>
     [System.Serializable]
     public class AtlasData {
 

@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace SwfParserRuntime {
 
-    [RequireComponent(typeof(MeshFilter), typeof(MeshRenderer)), DisallowMultipleComponent]
+    [DisallowMultipleComponent]
     public class ClipRenderer : MonoBehaviour {
 
         [SerializeField] private Swf m_swf;
@@ -14,8 +14,6 @@ namespace SwfParserRuntime {
         private void Awake() {
             Debug.Log($"{GetType().Name}::Awake();");
 
-            MeshFilter meshFilter = GetComponent<MeshFilter>();
-            MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
 
             movieClip = new MovieClip(m_swf, m_symbolClassName, isInUI: false);
         }

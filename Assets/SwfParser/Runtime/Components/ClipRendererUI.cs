@@ -13,7 +13,6 @@ namespace SwfParserRuntime {
 
         private void Awake() {
             Debug.Log($"{GetType().Name}::Awake();");
-            //var meshHelper = new MeshHelperUI();
             movieClip = new MovieClip(m_swf, m_symbolClassName, isInUI: true);
         }
 
