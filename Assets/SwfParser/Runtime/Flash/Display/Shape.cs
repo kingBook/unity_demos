@@ -11,7 +11,7 @@ namespace SwfParserRuntime {
         public Material material { get; protected set; }
 
         public Shape(SubSpriteInfo subSpriteInfo, Matrix matrix) : base() {
-            
+
 
             // Texture2D atlas = atlasData.sourceTex;
             // string atlasPath = atlasData.path;
@@ -51,12 +51,12 @@ namespace SwfParserRuntime {
             // // 三角形 ----------------------------------------
             // int[] triangles = new int[3 * 2] {
             //     0,1,3,
-            //     1,2,3
+            //     1,2,3Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Unlit-Default.shader
             // };
             // mesh.SetTriangles(triangles, 0);
 
             // // 材质 ------------------------------------------
-            // material = new(Shader.Find("Sprites/Default")) {
+            // material = new(Shader.Find("Universal Render Pipeline/2D/Sprite-Unlit-Default")) {
             //     mainTexture = atlas
             // };
 

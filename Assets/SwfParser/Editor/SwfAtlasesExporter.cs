@@ -44,7 +44,7 @@ namespace SwfParserEditor {
         /// <param name="swfFolderPath"> 绝对路径，如：E:/kingBook/projects/unity_swfParse/Assets </param>
         /// <returns></returns>
         public AtlasData[] Export(string swfFolderPath) {
-            // 获取所有图像数据
+            // 获取所有位图数据
             Stopwatch sw = new();
             sw.Start();
             ImageData[] imageDatas = m_swf.GetImageDatas(true);
@@ -57,7 +57,7 @@ namespace SwfParserEditor {
             WriteTexture2DsToDisk(atlases, swfFolderPath, out string[] atlasPaths); // 已打包的所有图集保存到硬盘
             ImportAtlasAssets(atlasPaths, ref subSpriteInfo2Ds, out Texture2D[] atlasAssets); // 将已保存到硬盘的图集导入到编辑器，并返回导入后的图集纹理路径
 
-            // 到此处 atlases, atlasPaths, subSpriteInfo2Ds, atlasAssets 的长度应相等的，但与 imageDatas 的长度不一定相等
+            // * 到此处 atlases, atlasPaths, subSpriteInfo2Ds, atlasAssets 的长度应相等的，但与 imageDatas 的长度不一定相等
 
             // 图集数据
             int len = atlasPaths.Length;

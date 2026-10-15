@@ -30,70 +30,77 @@ MonoBehaviour:
       name: _TextStatic
   usedCharacterIds: 030002000500040006000700080009000a000b000c000d000e000f0010001100120013001400
   usedCharacterIdTags:
-  - rid: 1477968232079687761
-  - rid: 1477968232079687762
-  - rid: 1477968232079687763
-  - rid: 1477968232079687764
-  - rid: 1477968232079687765
-  - rid: 1477968232079687766
-  - rid: 1477968232079687767
-  - rid: 1477968232079687768
-  - rid: 1477968232079687769
-  - rid: 1477968232079687770
-  - rid: 1477968232079687771
-  - rid: 1477968232079687772
-  - rid: 1477968232079687773
-  - rid: 1477968232079687774
-  - rid: 1477968232079687775
-  - rid: 1477968232079687776
-  - rid: 1477968232079687777
-  - rid: 1477968232079687778
-  atlasesData:
-    atlasAssets:
-    - {fileID: 2800000, guid: 197489b768dfe9d448d9fac88bb25955, type: 3}
-    atlasPaths:
-    - Assets/SwfParser/Demo/swfs/test_export/0.png
-    rectInfo2Ds:
-    - rectInfos:
-      - characterID: 6
-        rect:
-          serializedVersion: 2
-          x: 0.375
-          y: 0.47851562
-          width: 0.59375
-          height: 0.072265625
-      - characterID: 9
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0.25
-          width: 0.3984375
-          height: 0.22070312
-      - characterID: 11
-        rect:
-          serializedVersion: 2
-          x: 0.4140625
-          y: 0.25
-          width: 0.37109375
-          height: 0.19726562
-      - characterID: 14
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0.47851562
-          width: 0.359375
-          height: 0.22265625
-      - characterID: 18
-        rect:
-          serializedVersion: 2
-          x: 0
-          y: 0
-          width: 0.76171875
-          height: 0.2421875
+  - rid: 1477968271021703320
+  - rid: 1477968271021703321
+  - rid: 1477968271021703322
+  - rid: 1477968271021703323
+  - rid: 1477968271021703324
+  - rid: 1477968271021703325
+  - rid: 1477968271021703326
+  - rid: 1477968271021703327
+  - rid: 1477968271021703328
+  - rid: 1477968271021703329
+  - rid: 1477968271021703330
+  - rid: 1477968271021703331
+  - rid: 1477968271021703332
+  - rid: 1477968271021703333
+  - rid: 1477968271021703334
+  - rid: 1477968271021703335
+  - rid: 1477968271021703336
+  - rid: 1477968271021703337
+  atlasDatas:
+  - path: Assets/SwfParser/Demo/swfs/test_export/0.png
+    sourceTex: {fileID: 2800000, guid: 9e61a987b03701d43833aeb602c78f20, type: 3}
+    subSpriteInfos:
+    - characterID: 6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 245
+        width: 152
+        height: 37
+      sprite: {fileID: 6967745887157389618, guid: 9e61a987b03701d43833aeb602c78f20,
+        type: 3}
+    - characterID: 9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 102
+        height: 113
+      sprite: {fileID: -7010260848350730462, guid: 9e61a987b03701d43833aeb602c78f20,
+        type: 3}
+    - characterID: 11
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 128
+        width: 95
+        height: 101
+      sprite: {fileID: 6346318911325233748, guid: 9e61a987b03701d43833aeb602c78f20,
+        type: 3}
+    - characterID: 14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 245
+        width: 92
+        height: 114
+      sprite: {fileID: 2450565909728410856, guid: 9e61a987b03701d43833aeb602c78f20,
+        type: 3}
+    - characterID: 18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 195
+        height: 124
+      sprite: {fileID: 5661049957185019681, guid: 9e61a987b03701d43833aeb602c78f20,
+        type: 3}
   references:
     version: 2
     RefIds:
-    - rid: 1477968232079687761
+    - rid: 1477968271021703320
       type: {class: DefineTextTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -121,7 +128,7 @@ MonoBehaviour:
         advanceBits: 3
         textRecords: []
         endOfRecordsFlag: 0
-    - rid: 1477968232079687762
+    - rid: 1477968271021703321
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -130,10 +137,10 @@ MonoBehaviour:
         spriteId: 3
         frameCount: 1
         controlTags:
-        - rid: 1477968232079687779
-        - rid: 1477968232079687780
-        - rid: 1477968232079687781
-    - rid: 1477968232079687763
+        - rid: 1477968271021703338
+        - rid: 1477968271021703339
+        - rid: 1477968271021703340
+    - rid: 1477968271021703322
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -142,10 +149,10 @@ MonoBehaviour:
         spriteId: 5
         frameCount: 1
         controlTags:
-        - rid: 1477968232079687782
-        - rid: 1477968232079687783
-        - rid: 1477968232079687784
-    - rid: 1477968232079687764
+        - rid: 1477968271021703341
+        - rid: 1477968271021703342
+        - rid: 1477968271021703343
+    - rid: 1477968271021703323
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -156,7 +163,7 @@ MonoBehaviour:
         bitmapWidth: 152
         bitmapHeight: 37
         bitmapColorTableSize: 0
-    - rid: 1477968232079687765
+    - rid: 1477968271021703324
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -230,7 +237,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968232079687766
+    - rid: 1477968271021703325
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -239,10 +246,10 @@ MonoBehaviour:
         spriteId: 8
         frameCount: 1
         controlTags:
-        - rid: 1477968232079687785
-        - rid: 1477968232079687786
-        - rid: 1477968232079687787
-    - rid: 1477968232079687767
+        - rid: 1477968271021703344
+        - rid: 1477968271021703345
+        - rid: 1477968271021703346
+    - rid: 1477968271021703326
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -253,7 +260,7 @@ MonoBehaviour:
         bitmapWidth: 102
         bitmapHeight: 113
         bitmapColorTableSize: 0
-    - rid: 1477968232079687768
+    - rid: 1477968271021703327
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -327,7 +334,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968232079687769
+    - rid: 1477968271021703328
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -338,7 +345,7 @@ MonoBehaviour:
         bitmapWidth: 95
         bitmapHeight: 101
         bitmapColorTableSize: 0
-    - rid: 1477968232079687770
+    - rid: 1477968271021703329
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -412,7 +419,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968232079687771
+    - rid: 1477968271021703330
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -421,10 +428,10 @@ MonoBehaviour:
         spriteId: 13
         frameCount: 1
         controlTags:
-        - rid: 1477968232079687788
-        - rid: 1477968232079687789
-        - rid: 1477968232079687790
-    - rid: 1477968232079687772
+        - rid: 1477968271021703347
+        - rid: 1477968271021703348
+        - rid: 1477968271021703349
+    - rid: 1477968271021703331
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -435,7 +442,7 @@ MonoBehaviour:
         bitmapWidth: 92
         bitmapHeight: 114
         bitmapColorTableSize: 0
-    - rid: 1477968232079687773
+    - rid: 1477968271021703332
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -509,7 +516,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968232079687774
+    - rid: 1477968271021703333
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -518,10 +525,10 @@ MonoBehaviour:
         spriteId: 16
         frameCount: 1
         controlTags:
-        - rid: 1477968232079687791
-        - rid: 1477968232079687792
-        - rid: 1477968232079687793
-    - rid: 1477968232079687775
+        - rid: 1477968271021703350
+        - rid: 1477968271021703351
+        - rid: 1477968271021703352
+    - rid: 1477968271021703334
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -530,14 +537,14 @@ MonoBehaviour:
         spriteId: 17
         frameCount: 2
         controlTags:
-        - rid: 1477968232079687794
-        - rid: 1477968232079687795
-        - rid: 1477968232079687796
-        - rid: 1477968232079687797
-        - rid: 1477968232079687798
-        - rid: 1477968232079687799
-        - rid: 1477968232079687800
-    - rid: 1477968232079687776
+        - rid: 1477968271021703353
+        - rid: 1477968271021703354
+        - rid: 1477968271021703355
+        - rid: 1477968271021703356
+        - rid: 1477968271021703357
+        - rid: 1477968271021703358
+        - rid: 1477968271021703359
+    - rid: 1477968271021703335
       type: {class: DefineBitsLossless2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -548,7 +555,7 @@ MonoBehaviour:
         bitmapWidth: 195
         bitmapHeight: 124
         bitmapColorTableSize: 0
-    - rid: 1477968232079687777
+    - rid: 1477968271021703336
       type: {class: DefineShapeTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -622,7 +629,7 @@ MonoBehaviour:
             lineStyleCountExtended: 0
           numFillBits: 2
           numLineBits: 0
-    - rid: 1477968232079687778
+    - rid: 1477968271021703337
       type: {class: DefineSpriteTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -631,10 +638,10 @@ MonoBehaviour:
         spriteId: 20
         frameCount: 1
         controlTags:
-        - rid: 1477968232079687801
-        - rid: 1477968232079687802
-        - rid: 1477968232079687803
-    - rid: 1477968232079687779
+        - rid: 1477968271021703360
+        - rid: 1477968271021703361
+        - rid: 1477968271021703362
+    - rid: 1477968271021703338
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -677,19 +684,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968232079687780
+    - rid: 1477968271021703339
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968232079687781
+    - rid: 1477968271021703340
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968232079687782
+    - rid: 1477968271021703341
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -732,19 +739,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968232079687783
+    - rid: 1477968271021703342
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968232079687784
+    - rid: 1477968271021703343
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968232079687785
+    - rid: 1477968271021703344
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -787,19 +794,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968232079687786
+    - rid: 1477968271021703345
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968232079687787
+    - rid: 1477968271021703346
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968232079687788
+    - rid: 1477968271021703347
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -842,19 +849,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968232079687789
+    - rid: 1477968271021703348
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968232079687790
+    - rid: 1477968271021703349
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968232079687791
+    - rid: 1477968271021703350
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -897,19 +904,19 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968232079687792
+    - rid: 1477968271021703351
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968232079687793
+    - rid: 1477968271021703352
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968232079687794
+    - rid: 1477968271021703353
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -952,7 +959,7 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968232079687795
+    - rid: 1477968271021703354
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -995,20 +1002,20 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968232079687796
+    - rid: 1477968271021703355
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968232079687797
+    - rid: 1477968271021703356
       type: {class: RemoveObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 28
           length: 2
         depth: 1
-    - rid: 1477968232079687798
+    - rid: 1477968271021703357
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -1051,19 +1058,19 @@ MonoBehaviour:
         ratio: 1
         name: 
         clipDepth: 0
-    - rid: 1477968232079687799
+    - rid: 1477968271021703358
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968232079687800
+    - rid: 1477968271021703359
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 0
           length: 0
-    - rid: 1477968232079687801
+    - rid: 1477968271021703360
       type: {class: PlaceObject2Tag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
@@ -1106,13 +1113,13 @@ MonoBehaviour:
         ratio: 0
         name: 
         clipDepth: 0
-    - rid: 1477968232079687802
+    - rid: 1477968271021703361
       type: {class: ShowFrameTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:
           type: 1
           length: 0
-    - rid: 1477968232079687803
+    - rid: 1477968271021703362
       type: {class: EndTag, ns: SwfParserRuntime, asm: Assembly-CSharp}
       data:
         header:

@@ -28,7 +28,7 @@ namespace SwfParserRuntime {
                 byte type = fillStyle.fillStyleType;
                 if (type == 0x40 || type == 0x41 || type == 0x42 || type == 0x43) {
                     SubSpriteInfo subSpriteInfo = swf.FindSubSpriteInfoInAtlasDatas(fillStyle.bitmapId);
-                    var shape = new Shape(subSpriteInfo, fillStyle.bitmapMatrix.ToMatrix());
+                    Shape shape = new(subSpriteInfo, fillStyle.bitmapMatrix.ToMatrix());
                     parent.AddChild(shape);
                 }
             }

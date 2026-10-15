@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 197489b768dfe9d448d9fac88bb25955
+guid: 9e61a987b03701d43833aeb602c78f20
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -112,7 +112,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3f297491c433cb41b45d633f316e8a1
+      spriteID: b7c245046c86e4c4089932bdbc07ecce
       internalID: 6967745887157389618
       vertices: []
       indices: 
@@ -134,7 +134,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59d0186cfa988c7419f26593bfba6016
+      spriteID: 9d82d6f07f8bf414ea5f7599e11d9e91
       internalID: -7010260848350730462
       vertices: []
       indices: 
@@ -156,7 +156,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a6e8a111656b09a4a821d881888c1561
+      spriteID: 8f1fd69e9c51df44eba9dcc722a9532e
       internalID: 6346318911325233748
       vertices: []
       indices: 
@@ -178,7 +178,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8950ac57c3261634fb93e5820a69914c
+      spriteID: 7e483c16eca7ae4458269c289c1893e2
       internalID: 2450565909728410856
       vertices: []
       indices: 
@@ -200,7 +200,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f50d566ddefeb6c4c88d3a9ef1bfe873
+      spriteID: ecf4e4fdb7df93646a46da137e77725c
       internalID: 5661049957185019681
       vertices: []
       indices: 
@@ -210,7 +210,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e4fc0f495bf2f344c9fc03723579fcc2
+    spriteID: 934d8e26076ec094691649c991b0063d
     internalID: 0
     vertices: []
     indices: 
@@ -220,7 +220,6 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      0_0: 1424036590
       11: 6346318911325233748
       14: 2450565909728410856
       18: 5661049957185019681

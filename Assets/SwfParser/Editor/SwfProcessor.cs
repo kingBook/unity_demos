@@ -21,15 +21,15 @@ namespace SwfParserEditor {
             string swfFolderPath = FileUtil.GetLogicalPath(System.IO.Path.GetDirectoryName(swfPath));
 
             // =========== 创建 Swf 类实例 ===================================
-            Stopwatch sw = new Stopwatch();
+            Stopwatch sw = new();
             sw.Start();
-            var swf = Swf.Create(swfPath);
+            Swf swf = Swf.Create(swfPath);
             sw.Stop();
             Debug.Log("read swf passed time:" + sw.ElapsedMilliseconds);
 
             // =========== 导出 .xml ========================================
             if (SwfParseConfig.isExportXml) {
-                SwfXmlExporter swfXmlExporter = new SwfXmlExporter(swf);
+                SwfXmlExporter swfXmlExporter = new(swf);
                 swfXmlExporter.Export(swfPath);
             }
 
@@ -37,18 +37,18 @@ namespace SwfParserEditor {
             AtlasData[] atlasDatas = null;
             switch (SwfParseConfig.exportImagesOption) {
                 case ExportImagesOption.OneByOne:
-                    var swfImagesExporter = new SwfImagesExporter(swf);
+                    SwfImagesExporter swfImagesExporter = new(swf);
                     atlasDatas = swfImagesExporter.Export(swfFolderPath);
                     break;
                 case ExportImagesOption.Atlas:
-                    var swfAtlasesExporter = new SwfAtlasesExporter(swf);
+                    SwfAtlasesExporter swfAtlasesExporter = new(swf);
                     atlasDatas = swfAtlasesExporter.Export(swfFolderPath);
                     break;
             }
 
             // =========== 导出运行时数据 (xx.swfData) ======================
             if (SwfParseConfig.isExportSwfData) {
-                var swfAssetExporter = new SwfAssetExporter(swf);
+                SwfAssetExporter swfAssetExporter = new(swf);
                 swfAssetExporter.Export(swfPath, atlasDatas);
             }
 
