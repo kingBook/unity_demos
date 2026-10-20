@@ -153,6 +153,21 @@ namespace SwfParserRuntime {
             return false;
         }
 
+        /// <summary>
+        /// 获取类链接符号数组 (注：可能返回 null 或 空数组)
+        /// </summary>
+        public SymbolClassRecord[] GetSymbols() {
+            if (symbolClassTags == null || symbolClassTags.Count == 0) {
+                return null;
+            }
+
+            SymbolClassRecord[] symbols = symbolClassTags
+                .Where(tag => tag != null && tag.symbols != null) // 筛选条件
+                .SelectMany(tag => tag.symbols) // 展平 tag.symbols
+                .ToArray();
+            return symbols;
+        }
+
         public XmlDocument ToXml() {
             var doc = new XmlDocument();
             XmlDeclaration declaration = doc.CreateXmlDeclaration("1.0", "UTF-8", null);

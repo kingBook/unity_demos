@@ -1,25 +1,32 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
 namespace SwfParserRuntime {
 
-    // [SerializeField] private Swf m_swf;
-    // [SerializeField] private string m_symbolClassName;
-
     public class MovieClip : Sprite {
 
-        public int currentFrame { get; set; }
-        public string currentFrameLabel{ get; set; }
-        public string currentLabel{ get; set; }
-        public string[] currentLabels{ get; set; }
-        public bool isPlaying{ get; set; }
-        public int totalFrames{ get; set; }
-
-        //
+        #region 非 Flash.Display.MovieClip 的属性
+        [SerializeField]
         private Swf m_swf;
+
+        [SerializeField]
+        private ushort m_spriteId;
+
         private List<Tag>[] m_frameTags;
+
+        public Swf swf => m_swf;
+        #endregion
+
+        public int currentFrame { get; set; }
+        public string currentFrameLabel { get; set; }
+        public string currentLabel { get; set; }
+        public string[] currentLabels { get; set; }
+        public bool isPlaying { get; set; }
+        public int totalFrames { get; set; }
+
 
         public MovieClip(Swf swf, string symbolClassName, bool isInUI) : base() {
             // 获取与类名匹配的 DefineSpriteTag
