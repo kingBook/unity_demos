@@ -20,7 +20,7 @@ namespace SwfParserEditor {
         /// <param name="swfPath"> 绝对路径 </param>
         /// <param name="atlasesData"> 图集数据 </param>
         public void Export(string swfPath, AtlasData[] atlasDatas) {
-            Stopwatch sw = new Stopwatch();
+            Stopwatch sw = new ();
             sw.Start();
 
             string swfDataRelativePath = $"{FileUtil.GetProjectRelativePath(swfPath)}.asset";
