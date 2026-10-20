@@ -38,7 +38,8 @@ namespace SwfParserRuntime {
             int currentIndex = System.Array.FindIndex(symbols, item => item.tagId == m_spriteId.uintValue);
             if (currentIndex < 0) currentIndex = 0;
 
-            int newIndex = EditorGUILayout.Popup("SpriteId", currentIndex, symbols.Select(item => $"{item.tagId} ({item.name})").ToArray());
+            string[] names = symbols.Select(item => $"{item.tagId} ({(!string.IsNullOrEmpty(item.name) ? item.name : "<None>")})").ToArray();
+            int newIndex = EditorGUILayout.Popup("SpriteId", currentIndex, names);
 
             if (newIndex >= 0 && newIndex < symbols.Length) {
                 m_spriteId.uintValue = symbols[newIndex].tagId;
