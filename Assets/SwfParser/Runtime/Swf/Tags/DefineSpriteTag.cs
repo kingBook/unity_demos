@@ -32,7 +32,8 @@ namespace SwfParserRuntime {
         }
 
         public override void Load(Swf swf, DisplayObjectContainer parent, bool isInUI) {
-            var mc = new MovieClip(swf, this, isInUI);
+            GameObject gameObj = new ();
+            MovieClip mc = gameObj.AddComponent<MovieClip>();
             parent.AddChild(mc);
         }
 

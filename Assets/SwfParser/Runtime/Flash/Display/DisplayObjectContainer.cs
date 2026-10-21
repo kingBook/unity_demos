@@ -33,6 +33,8 @@ namespace SwfParserRuntime {
                 if (m_children[index] != child) {
                     m_children.Remove(child);
                     m_children.Insert(index, child);
+
+                    gameObject.transform.SetSiblingIndex(index);
                 }
             } else {
                 if (child.parent != null) {
@@ -78,6 +80,7 @@ namespace SwfParserRuntime {
                 child.parent = null;
                 m_children.Remove(child);
                 m_removeChildren.Add(child);
+
             }
             return child;
         }

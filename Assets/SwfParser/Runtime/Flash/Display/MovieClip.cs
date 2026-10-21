@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -9,15 +8,18 @@ namespace SwfParserRuntime {
     public class MovieClip : Sprite {
 
         #region 非 Flash.Display.MovieClip 的属性
-        [SerializeField]
-        private Swf m_swf;
+        [Tooltip("引用的 Swf")]
+        public Swf swf;
 
-        [SerializeField]
-        private ushort m_spriteId;
+        [Tooltip("链接类名")]
+        public string symbolClassName;
+
+        [System.NonSerialized]
+        public ushort spriteId;
 
         private List<Tag>[] m_frameTags;
 
-        public Swf swf => m_swf;
+        public List<Tag>[] frameTags => m_frameTags;
         #endregion
 
         public int currentFrame { get; set; }
@@ -27,26 +29,26 @@ namespace SwfParserRuntime {
         public bool isPlaying { get; set; }
         public int totalFrames { get; set; }
 
+        // public MovieClip(Swf swf, string symbolClassName, bool isInUI) : base() {
+        //     // 获取与类名匹配的 DefineSpriteTag
+        //     DefineSpriteTag defineSpriteTag = swf.GetUsedDefineSpriteTag(symbolClassName);
+        //     Init(swf, defineSpriteTag, isInUI);
+        // }
 
-        public MovieClip(Swf swf, string symbolClassName, bool isInUI) : base() {
+        // public MovieClip(Swf swf, DefineSpriteTag defineSpriteTag, bool isInUI) : base() {
+        //     Init(swf, defineSpriteTag, isInUI);
+        // }
+
+        protected override void Awake() {
             // 获取与类名匹配的 DefineSpriteTag
             DefineSpriteTag defineSpriteTag = swf.GetUsedDefineSpriteTag(symbolClassName);
-            Init(swf, defineSpriteTag, isInUI);
-        }
-
-        public MovieClip(Swf swf, DefineSpriteTag defineSpriteTag, bool isInUI) : base() {
-            Init(swf, defineSpriteTag, isInUI);
-        }
-
-        private void Init(Swf swf, DefineSpriteTag defineSpriteTag, bool isInUI) {
-            m_swf = swf;
-            base.isInUI = isInUI;
-
             // 获取 defineSpriteTag 所有帧的 controlTags
             m_frameTags = GetFrameTags(defineSpriteTag);
 
             // 跳到指定帧
             GotoFrame(0);
+
+            base.Awake();
         }
 
         /// <summary>
@@ -124,12 +126,12 @@ namespace SwfParserRuntime {
         /// </summary>
         /// <param name="frameIndex"> 帧索引 </param>
         public void GotoFrame(int frameIndex) {
-            frameIndex = Math.Clamp(frameIndex, 0, m_frameTags.Length - 1);
+            frameIndex = Mathf.Clamp(frameIndex, 0, m_frameTags.Length - 1);
             List<Tag> frameTags = m_frameTags[frameIndex];
 
             for (int i = 0, len = frameTags.Count; i < len; i++) {
                 var tag = frameTags[i];
-                tag.Load(m_swf, this, isInUI);
+                tag.Load(swf, this, isInUI);
             }
         }
 

@@ -9,14 +9,18 @@ namespace SwfParserRuntime {
     public class Swf : ScriptableObject {
 
         public SwfHeader header;
+
         [System.NonSerialized]
         public List<Tag> tags;
 
         #region 额外增加的属性
         public List<SymbolClassTag> symbolClassTags;
+        
         public List<ushort> usedCharacterIds;
+
         [SerializeReference]
         public List<ICharacterIdTag> usedCharacterIdTags;
+
         public AtlasData[] atlasDatas;
         #endregion
 

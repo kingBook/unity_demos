@@ -1,5 +1,6 @@
 namespace SwfParserRuntime {
 
+    [System.Serializable]
     public class SwfHeader {
         public static readonly string UNCOMPRESSED_SIGNATURE = "FWS";
         public static readonly string COMPRESSED_SIGNATURE = "CWS";
