@@ -14,18 +14,17 @@ namespace SwfParserRuntime {
         private SerializedProperty m_symbolClassName;
 
         private void OnEnable() {
-            m_swf = serializedObject.FindProperty("swf");
-            m_symbolClassName = serializedObject.FindProperty("symbolClassName");
+            m_swf = serializedObject.FindProperty("m_swf");
+            m_symbolClassName = serializedObject.FindProperty("m_symbolClassName");
         }
 
         public override void OnInspectorGUI() {
             serializedObject.Update(); // 更新序列化对象
 
-            // swf 属性
+            // m_swf 属性
             EditorGUILayout.PropertyField(m_swf);
 
-
-            // symbolClassName 属性
+            // m_symbolClassName 属性
             MovieClip mc = (MovieClip)target;
             if (mc.swf == null) {
                 serializedObject.ApplyModifiedProperties();  // 应用修改
@@ -33,7 +32,7 @@ namespace SwfParserRuntime {
             }
 
             SymbolClassRecord[] symbols = mc.swf.GetSymbols();
-            if (symbols == null || symbols.Length == 0) {
+            if (symbols.Length == 0) {
                 EditorGUILayout.HelpBox("没有可用的 Symbol", MessageType.Info);
                 serializedObject.ApplyModifiedProperties();  // 应用修改
                 return;
@@ -42,7 +41,6 @@ namespace SwfParserRuntime {
             int currentIndex = System.Array.FindIndex(symbols, item => item.name == m_symbolClassName.stringValue);
             if (currentIndex < 0) currentIndex = 0;
 
-            // string[] names = symbols.Select(item => $"{(!string.IsNullOrEmpty(item.name) ? item.name : "<None>")} ({item.tagId})").ToArray();
             string[] names = symbols.Select(item => $"{(!string.IsNullOrEmpty(item.name) ? item.name : "<None>")}").ToArray();
             int newIndex = EditorGUILayout.Popup("SymbolClassName", currentIndex, names);
 

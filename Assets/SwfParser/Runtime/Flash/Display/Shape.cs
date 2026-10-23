@@ -10,6 +10,14 @@ namespace SwfParserRuntime {
         public Mesh mesh { get; protected set; }
         public Material material { get; protected set; }
 
+        public static Shape Create(DisplayObjectContainer parent, bool isInUI) {
+            GameObject gameObj = new(typeof(Shape).Name);
+            Shape shape = gameObj.AddComponent<Shape>();
+            shape.isInUI = isInUI;
+            parent.AddChild(shape);
+            return shape;
+        }
+
         public Shape(SubSpriteInfo subSpriteInfo, Matrix matrix) : base() {
 
 

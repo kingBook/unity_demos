@@ -8,18 +8,13 @@ namespace SwfParserRuntime {
     public class MovieClip : Sprite {
 
         #region 非 Flash.Display.MovieClip 的属性
-        [Tooltip("引用的 Swf")]
-        public Swf swf;
+        [SerializeField, Tooltip("引用的 Swf")] private Swf m_swf;
+        [SerializeField, Tooltip("链接类名")] private string m_symbolClassName;
 
-        [Tooltip("链接类名")]
-        public string symbolClassName;
-
-        [System.NonSerialized]
-        public ushort spriteId;
-
-        private List<Tag>[] m_frameTags;
-
-        public List<Tag>[] frameTags => m_frameTags;
+        public Swf swf => m_swf;
+        public string symbolClassName => m_symbolClassName;
+        public DefineSpriteTag defineSpriteTag { get; private set; }
+        public List<Tag>[] frameTags { get; private set; }
         #endregion
 
         public int currentFrame { get; set; }
@@ -29,21 +24,38 @@ namespace SwfParserRuntime {
         public bool isPlaying { get; set; }
         public int totalFrames { get; set; }
 
-        // public MovieClip(Swf swf, string symbolClassName, bool isInUI) : base() {
-        //     // 获取与类名匹配的 DefineSpriteTag
-        //     DefineSpriteTag defineSpriteTag = swf.GetUsedDefineSpriteTag(symbolClassName);
-        //     Init(swf, defineSpriteTag, isInUI);
-        // }
+        public static MovieClip Create(Swf swf, string symbolClassName, DisplayObjectContainer parent, bool isInUI) {
+            SymbolClassRecord symbol = System.Array.Find(swf.GetSymbols(), item => item.name == symbolClassName);
+            GameObject gameObject = new(typeof(MovieClip).Name);
+            MovieClip mc = gameObject.AddComponent<MovieClip>();
+            mc.m_swf = swf;
+            mc.m_symbolClassName = symbol.name;
+            mc.defineSpriteTag = (DefineSpriteTag)swf.GetCharacterIdTag(symbol.tagId);
+            mc.isInUI = isInUI;
+            parent.AddChild(mc);
+            return mc;
+        }
 
-        // public MovieClip(Swf swf, DefineSpriteTag defineSpriteTag, bool isInUI) : base() {
-        //     Init(swf, defineSpriteTag, isInUI);
-        // }
+        public static MovieClip Create(Swf swf, DefineSpriteTag defineSpriteTag, DisplayObjectContainer parent, bool isInUI) {
+            GameObject gameObject = new(typeof(MovieClip).Name);
+            MovieClip mc = gameObject.AddComponent<MovieClip>();
+            mc.m_swf = swf;
+            mc.m_symbolClassName = string.Empty;
+            mc.defineSpriteTag = defineSpriteTag;
+            mc.isInUI = isInUI;
+            parent.AddChild(mc);
+            return mc;
+        }
 
         protected override void Awake() {
-            // 获取与类名匹配的 DefineSpriteTag
-            DefineSpriteTag defineSpriteTag = swf.GetUsedDefineSpriteTag(symbolClassName);
+            // 直接挂载时，defineSpriteTag 不会被赋值
+            if (defineSpriteTag == null) {
+                SymbolClassRecord symbol = System.Array.Find(swf.GetSymbols(), item => item.name == symbolClassName);
+                defineSpriteTag = (DefineSpriteTag)swf.GetCharacterIdTag(symbol.tagId);
+            }
+
             // 获取 defineSpriteTag 所有帧的 controlTags
-            m_frameTags = GetFrameTags(defineSpriteTag);
+            frameTags = GetFrameTags(defineSpriteTag);
 
             // 跳到指定帧
             GotoFrame(0);
@@ -126,11 +138,11 @@ namespace SwfParserRuntime {
         /// </summary>
         /// <param name="frameIndex"> 帧索引 </param>
         public void GotoFrame(int frameIndex) {
-            frameIndex = Mathf.Clamp(frameIndex, 0, m_frameTags.Length - 1);
-            List<Tag> frameTags = m_frameTags[frameIndex];
+            frameIndex = Mathf.Clamp(frameIndex, 0, frameTags.Length - 1);
+            List<Tag> tempFrameTags = frameTags[frameIndex];
 
-            for (int i = 0, len = frameTags.Count; i < len; i++) {
-                var tag = frameTags[i];
+            for (int i = 0, len = tempFrameTags.Count; i < len; i++) {
+                var tag = tempFrameTags[i];
                 tag.Load(swf, this, isInUI);
             }
         }

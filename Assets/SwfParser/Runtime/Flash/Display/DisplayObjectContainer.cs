@@ -1,49 +1,43 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 namespace SwfParserRuntime {
 
     public abstract class DisplayObjectContainer : DisplayObject {
 
-        protected List<DisplayObject> m_children;
-        protected List<DisplayObject> m_removeChildren;
+        protected List<DisplayObject> m_children = new();
+        protected List<DisplayObject> m_removedChildren = new();
 
+        public List<DisplayObject> children => m_children;
         public int numChildren => m_children.Count;
-
-        public DisplayObjectContainer() : base() {
-            m_children = new List<DisplayObject>();
-            m_removeChildren = new List<DisplayObject>();
-        }
 
         public DisplayObject AddChild(DisplayObject child) {
             return AddChildAt(child, numChildren);
         }
 
         public DisplayObject AddChildAt(DisplayObject child, int index) {
-            if (child == null) {
-                throw new System.Exception("Parameter child must be non-null.");
-            } else if (child == this) {
-                throw new System.Exception("An object cannot be added as a child of itself.");
-            }
+            if (child == null) throw new System.Exception("Parameter child must be non-null.");
 
-            if (index > m_children.Count || index < 0) {
-                throw new System.Exception("Invalid index position " + index);
-            }
+            if (child == this) throw new System.Exception("An object cannot be added as a child of itself.");
+
+            if (index > m_children.Count || index < 0) throw new System.Exception("Invalid index position " + index);
 
             if (child.parent == this) {
                 if (m_children[index] != child) {
                     m_children.Remove(child);
                     m_children.Insert(index, child);
-
-                    gameObject.transform.SetSiblingIndex(index);
+                    child.transform.SetSiblingIndex(index);
                 }
-            } else {
-                if (child.parent != null) {
-                    child.parent.RemoveChild(child);
-                }
-
-                m_children.Insert(index, child);
-                child.parent = this;
+                return child;
             }
+
+            if (child.parent != null) {
+                child.parent.RemoveChild(child);
+            }
+            m_children.Insert(index, child);
+            child.parent = this;
+            child.transform.SetParent(transform, worldPositionStays: !isInUI);
+
             return child;
         }
 
@@ -79,8 +73,10 @@ namespace SwfParserRuntime {
             if (child != null && child.parent == this) {
                 child.parent = null;
                 m_children.Remove(child);
-                m_removeChildren.Add(child);
-
+                child.transform.SetParent(null);
+                child.gameObject.SetActive(false); // 吊销
+                // 记录已移除对象
+                m_removedChildren.Add(child);
             }
             return child;
         }
@@ -118,6 +114,7 @@ namespace SwfParserRuntime {
             if (index >= 0 && index <= m_children.Count && child.parent == this) {
                 m_children.Remove(child);
                 m_children.Insert(index, child);
+                child.transform.SetSiblingIndex(index);
             }
         }
 
@@ -127,18 +124,24 @@ namespace SwfParserRuntime {
 
         public void SwapChildren(DisplayObject child1, DisplayObject child2) {
             if (child1.parent == this && child2.parent == this) {
-                var index1 = m_children.IndexOf(child1);
-                var index2 = m_children.IndexOf(child2);
+                int index1 = m_children.IndexOf(child1);
+                int index2 = m_children.IndexOf(child2);
 
                 m_children[index1] = child2;
                 m_children[index2] = child1;
+
+                if (index1 < index2) {
+                    child2.transform.SetSiblingIndex(index1);
+                    child1.transform.SetSiblingIndex(index2);
+                } else {
+                    child1.transform.SetSiblingIndex(index2);
+                    child2.transform.SetSiblingIndex(index1);
+                }
             }
         }
 
         public void SwapChildrenAt(int index1, int index2) {
-            var swap = m_children[index1];
-            m_children[index1] = m_children[index2];
-            m_children[index2] = swap;
+            (m_children[index2], m_children[index1]) = (m_children[index1], m_children[index2]);
         }
     }
 }

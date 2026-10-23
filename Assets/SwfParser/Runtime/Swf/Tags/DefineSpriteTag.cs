@@ -32,9 +32,7 @@ namespace SwfParserRuntime {
         }
 
         public override void Load(Swf swf, DisplayObjectContainer parent, bool isInUI) {
-            GameObject gameObj = new ();
-            MovieClip mc = gameObj.AddComponent<MovieClip>();
-            parent.AddChild(mc);
+            MovieClip.Create(swf, this, parent, isInUI);
         }
 
         public override XmlElement ToXml(XmlDocument doc) {

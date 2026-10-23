@@ -2,6 +2,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Xml;
 using System.Linq;
+using System;
 
 namespace SwfParserRuntime {
 
@@ -56,24 +57,6 @@ namespace SwfParserRuntime {
 
         public void SetAtlasDatas(AtlasData[] value) {
             atlasDatas = value;
-        }
-
-        /// <summary>
-        /// 根据 symbolClassName 获取 DefineSpriteTag
-        /// </summary>
-        /// <param name="symbolClassName"> 链接类名 </param>
-        /// <returns></returns>
-        public DefineSpriteTag GetUsedDefineSpriteTag(string symbolClassName) {
-            for (int i = 0, c = symbolClassTags.Count; i < c; i++) {
-                var symbols = symbolClassTags[i].symbols;
-                for (int j = 0, len = symbols.Length; j < len; j++) {
-                    var symobolClassRecord = symbols[j];
-                    if (symbolClassName == symobolClassRecord.name) {
-                        return (DefineSpriteTag)GetCharacterIdTag(symobolClassRecord.tagId);
-                    }
-                }
-            }
-            return null;
         }
 
         /// <summary>
@@ -158,11 +141,11 @@ namespace SwfParserRuntime {
         }
 
         /// <summary>
-        /// 获取类链接符号数组 (注：可能返回 null 或 空数组)
+        /// 获取类链接符号数组 (注：可能返回空数组)
         /// </summary>
         public SymbolClassRecord[] GetSymbols() {
             if (symbolClassTags == null || symbolClassTags.Count == 0) {
-                return null;
+                return new SymbolClassRecord[0];
             }
 
             SymbolClassRecord[] symbols = symbolClassTags

@@ -28,11 +28,13 @@ namespace SwfParserRuntime {
                 FillStyleRecord fillStyle = fillStyles[1];
                 byte type = fillStyle.fillStyleType;
                 if (type == 0x40 || type == 0x41 || type == 0x42 || type == 0x43) {
-                    GameObject gameObj = new($"Shape");
-                    Shape shape = gameObj.AddComponent<Shape>();
-                    SubSpriteInfo subSpriteInfo = swf.FindSubSpriteInfoInAtlasDatas(fillStyle.bitmapId);
-                    //Shape shape = new(subSpriteInfo, fillStyle.bitmapMatrix.ToMatrix());
-                    parent.AddChild(shape);
+                    // GameObject gameObj = new($"Shape");
+                    // Shape shape = gameObj.AddComponent<Shape>();
+                    // SubSpriteInfo subSpriteInfo = swf.FindSubSpriteInfoInAtlasDatas(fillStyle.bitmapId);
+                    // Shape shape = new(subSpriteInfo, fillStyle.bitmapMatrix.ToMatrix());
+                    // parent.AddChild(shape);
+
+                    Shape.Create(parent, isInUI);
                 }
             }
         }
