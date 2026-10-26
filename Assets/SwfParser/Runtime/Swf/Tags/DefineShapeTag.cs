@@ -22,21 +22,7 @@ namespace SwfParserRuntime {
         }
 
         public override void Load(Swf swf, DisplayObjectContainer parent, bool isInUI) {
-            // bitmapId
-            FillStyleRecord[] fillStyles = shapes.fillStyles.fillStyles;
-            if (fillStyles.Length >= 2) {
-                FillStyleRecord fillStyle = fillStyles[1];
-                byte type = fillStyle.fillStyleType;
-                if (type == 0x40 || type == 0x41 || type == 0x42 || type == 0x43) {
-                    // GameObject gameObj = new($"Shape");
-                    // Shape shape = gameObj.AddComponent<Shape>();
-                    // SubSpriteInfo subSpriteInfo = swf.FindSubSpriteInfoInAtlasDatas(fillStyle.bitmapId);
-                    // Shape shape = new(subSpriteInfo, fillStyle.bitmapMatrix.ToMatrix());
-                    // parent.AddChild(shape);
-
-                    Shape.Create(parent, isInUI);
-                }
-            }
+            Shape.Create(swf, this, parent, isInUI);
         }
 
         public override XmlElement ToXml(XmlDocument doc) {

@@ -44,8 +44,8 @@ namespace SwfParserRuntime {
         }
 
         public override string ToString() {
-            //[scaleX, skewX, tx,
-            //  skewY, scaleY,ty]
+            // |scaleX, skewX,  tx|
+            // |skewY,  scaleY, ty|
             float scaleX = hasScale ? this.scaleX : 1;
             float scaleY = hasScale ? this.scaleY : 1;
             float skewX = hasRotate ? rotateSkew0 : 0;
@@ -56,7 +56,14 @@ namespace SwfParserRuntime {
         }
 
         public Matrix ToMatrix() {
-            return new Matrix(scaleX / 20.0f, rotateSkew0 / 20.0f, rotateSkew1 / 20.0f, scaleY / 20.0f, translateX / 20.0f, translateY / 20.0f);
+            return new Matrix(
+                a: scaleX / 20.0f,
+                b: rotateSkew0 / 20.0f,
+                c: rotateSkew1 / 20.0f,
+                d: scaleY / 20.0f,
+                tx: translateX / 20.0f,
+                ty: translateY / 20.0f
+            );
         }
 
     }

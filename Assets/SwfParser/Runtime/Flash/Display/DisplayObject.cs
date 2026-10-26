@@ -48,18 +48,18 @@ namespace SwfParserRuntime {
 
         }
 
-        /// <summary>
-        /// 父节点变更
-        /// </summary>
-        protected virtual void OnTransformParentChanged() {
-            // UI-RectTransform
-            if (GetComponentInParent<Canvas>()) {
-                return;
-            }
+        // /// <summary>
+        // /// 父节点变更
+        // /// </summary>
+        // protected virtual void OnTransformParentChanged() {
+        //     // UI-RectTransform
+        //     if (GetComponentInParent<Canvas>()) {
+        //         return;
+        //     }
 
-            // Transform
+        //     // Transform
 
-        }
+        // }
 
         protected virtual void OnDisable() {
 

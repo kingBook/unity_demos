@@ -27,27 +27,36 @@ namespace SwfParserRuntime {
         public static MovieClip Create(Swf swf, string symbolClassName, DisplayObjectContainer parent, bool isInUI) {
             SymbolClassRecord symbol = System.Array.Find(swf.GetSymbols(), item => item.name == symbolClassName);
             GameObject gameObject = new(typeof(MovieClip).Name);
+            gameObject.SetActive(false);
             MovieClip mc = gameObject.AddComponent<MovieClip>();
             mc.m_swf = swf;
             mc.m_symbolClassName = symbol.name;
             mc.defineSpriteTag = (DefineSpriteTag)swf.GetCharacterIdTag(symbol.tagId);
             mc.isInUI = isInUI;
             parent.AddChild(mc);
+            gameObject.SetActive(true);
             return mc;
         }
 
         public static MovieClip Create(Swf swf, DefineSpriteTag defineSpriteTag, DisplayObjectContainer parent, bool isInUI) {
             GameObject gameObject = new(typeof(MovieClip).Name);
+            gameObject.SetActive(false);
             MovieClip mc = gameObject.AddComponent<MovieClip>();
             mc.m_swf = swf;
             mc.m_symbolClassName = string.Empty;
             mc.defineSpriteTag = defineSpriteTag;
             mc.isInUI = isInUI;
             parent.AddChild(mc);
+            gameObject.SetActive(true);
             return mc;
         }
 
         protected override void Awake() {
+            // isInUI
+            if(!isInUI && GetComponent<RectTransform>()!=null) {
+                isInUI = true;
+            }
+
             // 直接挂载时，defineSpriteTag 不会被赋值
             if (defineSpriteTag == null) {
                 SymbolClassRecord symbol = System.Array.Find(swf.GetSymbols(), item => item.name == symbolClassName);
