@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace SwfParserRuntime {
 
-    public class Transform {
+    public class TransformF {
 
         //public colorTransform;
         public Matrix matrix;
 
-        public Transform() {
+        public TransformF() {
             matrix = new Matrix();
         }
 
