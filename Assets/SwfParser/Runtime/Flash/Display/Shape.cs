@@ -17,12 +17,15 @@ namespace SwfParserRuntime {
         public static Shape Create(Swf swf, DefineShapeTag defineShapeTag, DisplayObjectContainer parent, bool isInUI) {
             GameObject gameObj = new(typeof(Shape).Name);
             gameObj.SetActive(false);
+
             Shape shape = gameObj.AddComponent<Shape>();
             shape.swf = swf;
             shape.defineShapeTag = defineShapeTag;
             shape.isInUI = isInUI;
             parent.AddChild(shape);
+
             gameObj.SetActive(true);
+            
             return shape;
         }
 
