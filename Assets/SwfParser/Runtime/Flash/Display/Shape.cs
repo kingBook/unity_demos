@@ -25,7 +25,7 @@ namespace SwfParserRuntime {
             parent.AddChild(shape);
 
             gameObj.SetActive(true);
-            
+
             return shape;
         }
 
@@ -86,7 +86,8 @@ namespace SwfParserRuntime {
                 byte type = fillStyle.fillStyleType;
                 if (type == 0x40 || type == 0x41 || type == 0x42 || type == 0x43) {
                     SubSpriteInfo subSpriteInfo = swf.FindSubSpriteInfoInAtlasDatas(fillStyle.bitmapId);
-                    // Shape shape = new(subSpriteInfo, fillStyle.bitmapMatrix.ToMatrix());
+                    MatrixRecord bitmapMatrixRecord = fillStyle.bitmapMatrix;
+                    Matrix bitmapMatrix = fillStyle.bitmapMatrix.ToMatrix();
                     Debug.Log($"bitmapMatrix {fillStyle.bitmapMatrix.ToMatrix()}");
                     if (isInUI) {
                         Image image = gameObject.AddComponent<Image>();
@@ -95,6 +96,19 @@ namespace SwfParserRuntime {
                     } else {
                         SpriteRenderer spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
                         spriteRenderer.sprite = subSpriteInfo.sprite;
+                        // 应用矩阵：先缩放 → 再倾斜 → 再旋转 → 最后平移
+                        // 缩放
+                        if (bitmapMatrixRecord.hasScale) {
+                            spriteRenderer.transform.localScale = new Vector3(bitmapMatrix.a, bitmapMatrix.d, 1.0f);
+                        }
+                        // 倾斜
+                        
+                        // 旋转
+                        if (bitmapMatrixRecord.hasRotate) {
+
+                        }
+                        // 平移(注意: ty 取反方向)
+                        spriteRenderer.transform.Translate(new Vector3(bitmapMatrix.tx, -bitmapMatrix.ty, 0.0f), Space.Self);
                     }
                 }
             }
