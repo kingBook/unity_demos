@@ -35,8 +35,8 @@ namespace SwfParserRuntime {
                 rotateSkew1 = bytes.ReadFB(nRotateBits);
             } else {
                 nRotateBits = 0;
-                rotateSkew0 = 0;
-                rotateSkew1 = 0;
+                rotateSkew0 = 0f;
+                rotateSkew1 = 0f;
             }
             nTranslateBits = (byte)bytes.ReadUB(5);
             translateX = bytes.ReadSB(nTranslateBits);
@@ -44,12 +44,16 @@ namespace SwfParserRuntime {
         }
 
         public override string ToString() {
+            // |a, c, tx|
+            // |b, d, ty|
+
             // |scaleX, skewX,  tx|
             // |skewY,  scaleY, ty|
-            float scaleX = hasScale ? this.scaleX : 1;
-            float scaleY = hasScale ? this.scaleY : 1;
-            float skewX = hasRotate ? rotateSkew0 : 0;
-            float skewY = hasRotate ? rotateSkew1 : 0;
+
+            float scaleX = hasScale ? this.scaleX : 1f;
+            float scaleY = hasScale ? this.scaleY : 1f;
+            float skewX = hasRotate ? rotateSkew0 : 0f;
+            float skewY = hasRotate ? rotateSkew1 : 0f;
             float tx = translateX;
             float ty = translateY;
             return scaleX + "," + skewX + "," + tx + "," + skewY + "," + scaleY + "," + ty;

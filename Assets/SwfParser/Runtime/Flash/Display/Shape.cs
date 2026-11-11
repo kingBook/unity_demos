@@ -88,27 +88,16 @@ namespace SwfParserRuntime {
                     SubSpriteInfo subSpriteInfo = swf.FindSubSpriteInfoInAtlasDatas(fillStyle.bitmapId);
                     MatrixRecord bitmapMatrixRecord = fillStyle.bitmapMatrix;
                     Matrix bitmapMatrix = fillStyle.bitmapMatrix.ToMatrix();
-                    Debug.Log($"bitmapMatrix {fillStyle.bitmapMatrix.ToMatrix()}");
+                    Debug.Log($"bitmapMatrix {bitmapMatrix}");
                     if (isInUI) {
                         Image image = gameObject.AddComponent<Image>();
                         image.sprite = subSpriteInfo.sprite;
                         image.rectTransform.sizeDelta = subSpriteInfo.rect.size;
+                        MatrixUtil.TransformApplyMatrix(image.rectTransform, bitmapMatrix);
                     } else {
                         SpriteRenderer spriteRenderer = gameObject.AddComponent<SpriteRenderer>();
                         spriteRenderer.sprite = subSpriteInfo.sprite;
-                        // 应用矩阵：先缩放 → 再倾斜 → 再旋转 → 最后平移
-                        // 缩放
-                        if (bitmapMatrixRecord.hasScale) {
-                            spriteRenderer.transform.localScale = new Vector3(bitmapMatrix.a, bitmapMatrix.d, 1.0f);
-                        }
-                        // 倾斜
-                        
-                        // 旋转
-                        if (bitmapMatrixRecord.hasRotate) {
-
-                        }
-                        // 平移(注意: ty 取反方向)
-                        spriteRenderer.transform.Translate(new Vector3(bitmapMatrix.tx, -bitmapMatrix.ty, 0.0f), Space.Self);
+                        MatrixUtil.TransformApplyMatrix(spriteRenderer.transform, bitmapMatrix);
                     }
                 }
             }
