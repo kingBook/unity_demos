@@ -87,7 +87,7 @@ namespace SwfParserRuntime {
                 if (type == 0x40 || type == 0x41 || type == 0x42 || type == 0x43) {
                     SubSpriteInfo subSpriteInfo = swf.FindSubSpriteInfoInAtlasDatas(fillStyle.bitmapId);
                     MatrixRecord bitmapMatrixRecord = fillStyle.bitmapMatrix;
-                    Matrix bitmapMatrix = fillStyle.bitmapMatrix.ToMatrix();
+                    Matrix bitmapMatrix = bitmapMatrixRecord.ToMatrix();
                     Debug.Log($"bitmapMatrix {bitmapMatrix}");
                     if (isInUI) {
                         Image image = gameObject.AddComponent<Image>();
