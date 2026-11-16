@@ -1,5 +1,7 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class CharacterController2D : MonoBehaviour {
 
     public float slopeLimit = 45f;
@@ -17,6 +19,15 @@ public class CharacterController2D : MonoBehaviour {
     private void Awake() {
         _body = GetComponent<Rigidbody2D>();
         _collider = GetComponent<BoxCollider2D>();
+
+    }
+
+    public void Jump() {
+        _body.AddForceY(_body.mass * 10f, ForceMode2D.Impulse);
+    }
+
+    public void Move(float nx) {
+        _body.AddForceX(_body.mass * nx * 1f);
     }
 
 
