@@ -204,10 +204,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
+  m_fontSize: 72
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -669,6 +669,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e395d5d418cde44b8baf3a2689ac89c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TestActions
+  fireAction: {fileID: 8914416467331794811, guid: ca4087387c3788147943c465d659f9ae,
+    type: 3}
+  longJumpAction: {fileID: -8443621395013836581, guid: ca4087387c3788147943c465d659f9ae,
+    type: 3}
+  moveAction: {fileID: 1722147409754079960, guid: ca4087387c3788147943c465d659f9ae,
+    type: 3}
   _outputTxt: {fileID: 579670861}
 --- !u!1 &2105300601
 GameObject:
@@ -728,7 +734,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\u6309\u4E0B\u9F20\u6807\u5DE6\u952E/J\u952E\uFF0C\u6267\u884C fire \u52A8\u4F5C\n\n\u957F\u6309\u7A7A\u683C\u952E\uFF0C\u6267\u884C
-    longJump \u52A8\u4F5C"
+    longJump \u52A8\u4F5C\n\nAWDS/\u4E0A\u4E0B\u5DE6\u53F3\u7BAD\u5934\u6267\u884C
+    move \u52A8\u4F5C"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6939a6c92447bb14480449314af6dbbf, type: 2}
   m_sharedMaterial: {fileID: 7584582300605717614, guid: 6939a6c92447bb14480449314af6dbbf,

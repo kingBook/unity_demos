@@ -11,4 +11,5 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ
 
 按下鼠标左键/J键，执行 fire 动作
 长按空格键，执行 longJump 动作
+AWDS/上下左右箭头执行 move 动作
 

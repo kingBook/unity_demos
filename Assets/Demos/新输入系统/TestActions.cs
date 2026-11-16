@@ -4,37 +4,48 @@ using UnityEngine.InputSystem;
 
 public class TestActions : MonoBehaviour {
 
+    public InputActionReference fireAction;
+    public InputActionReference longJumpAction;
+    public InputActionReference moveAction;
+
     [SerializeField]
     private TMP_Text _outputTxt;
 
-    private GameActions _gameActions;
 
     private void OnEnable() {
-        _gameActions = new GameActions();
-
-        // 按下/释放
-        _gameActions.player.fire.started += OnFireDown;
-        _gameActions.player.fire.canceled += OnFireUp;
-
-        // 长按
-        _gameActions.player.longJump.performed += OnLongPress;
-
-        // 启用
-        _gameActions.Enable();
+        fireAction.action.Enable();
+        longJumpAction.action.Enable();
+        moveAction.action.Enable();
     }
 
     private void OnDisable() {
-        _gameActions = new GameActions();
+        fireAction.action.Disable();
+        longJumpAction.action.Disable();
+        moveAction.action.Disable();
+    }
 
+    private void Update() {
         // 按下/释放
-        _gameActions.player.fire.started -= OnFireDown;
-        _gameActions.player.fire.canceled -= OnFireUp;
+        if (fireAction.action.WasPressedThisFrame()) {
+            Log("OnFireDown");
+        }
+        if (fireAction.action.WasReleasedThisFrame()) {
+            Log("OnFireUp");
+        }
 
         // 长按
-        _gameActions.player.longJump.performed -= OnLongPress;
+        if (longJumpAction.action.WasPerformedThisFrame()) {
+            Log("OnLongPress");
+        }
+        if (longJumpAction.action.WasReleasedThisFrame()) {
+            Log("OnLongUp");
+        }
 
-        // 禁用
-        _gameActions.Disable();
+        // 移动
+        Vector2 moveVec = moveAction.action.ReadValue<Vector2>();
+        if (moveVec.magnitude != 0.0f) {
+            Log($"Move {moveVec}");
+        }
     }
 
     private void Log(string msg) {
@@ -42,15 +53,4 @@ public class TestActions : MonoBehaviour {
         _outputTxt.text = msg;
     }
 
-    private void OnFireDown(InputAction.CallbackContext Obj) {
-        Log("OnFireDown");
-    }
-
-    private void OnLongPress(InputAction.CallbackContext Obj) {
-        Log("OnLongPress");
-    }
-
-    private void OnFireUp(InputAction.CallbackContext Obj) {
-        Log("OnFireUp");
-    }
 }
