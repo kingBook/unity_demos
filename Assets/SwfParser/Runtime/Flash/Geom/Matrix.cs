@@ -2,6 +2,12 @@ using UnityEngine;
 
 namespace SwfParserRuntime {
 
+    // |a, c, tx|
+    // |b, d, ty|
+
+    // |scaleX, skewX,  tx|
+    // |skewY,  scaleY, ty|
+
     public class Matrix {
 
         public float a;
@@ -244,7 +250,7 @@ namespace SwfParserRuntime {
         }
 
         public override string ToString() {
-            return $"(a={a}, b={b}, c={c}, d={d}, tx={tx}, ty={ty})";
+            return $"{nameof(Matrix)}(a={a}, b={b}, c={c}, d={d}, tx={tx}, ty={ty})";
         }
 
         public Vector2 TransformPoint(Vector2 pos) {

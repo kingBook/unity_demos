@@ -72,7 +72,7 @@ namespace SwfParserRuntime {
 
             }
             if (placeFlagHasMatrix) {
-                //Debug2.Log("placeObject2Tag.matrix:" + matrix);
+                //Debug2.Log($"placeObject2Tag characterId: {characterId}, matrix: {matrix}, matrixB: {matrix.ToMatrix()}");
             }
             if (placeFlagHasCharacter) {
                 //Debug2.Log("placeObject2Tag.characterId:" + characterId);

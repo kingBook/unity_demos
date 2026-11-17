@@ -382,7 +382,7 @@ namespace SwfParserRuntime {
             int raw = ReadSB(length);
 
             int integer = raw >> 16;
-            float decimalNum = (raw & s_filter16) / 0xFFFF;
+            float decimalNum = ((float)(raw & s_filter16)) / 0xFFFF;
 
             return integer + decimalNum;
         }
