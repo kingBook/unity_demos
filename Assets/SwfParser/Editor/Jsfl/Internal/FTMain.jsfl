@@ -21,7 +21,7 @@
 		open_documents            : opts.open_documents            === undefined ? []        : opts.open_documents,
 		export_path_postfix       : opts.export_path_postfix       === undefined ? "_export" : opts.export_path_postfix,
 		close_after_conversion    : opts.close_after_conversion    === undefined ? false     : opts.close_after_conversion,
-		revert_after_conversion   : opts.revert_after_conversion   === undefined ? true      : opts.revert_after_conversion,
+		revert_after_conversion   : opts.revert_after_conversion   === undefined ? false      : opts.revert_after_conversion,
 		max_convertible_selection : opts.max_convertible_selection === undefined ? 3900      : opts.max_convertible_selection
 	};
 
