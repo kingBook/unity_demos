@@ -73,8 +73,8 @@ namespace SwfParserRuntime {
             }
             if (placeFlagHasMatrix) {
                 Debug2.Log($"placeObject2Tag characterId: {characterId}, matrix: {matrix}, matrixB: {matrix.ToMatrix()}");
-                var (scaleX, scaleY, rotation, skewX, skewY) = MatrixUtil.Decompose(matrix.ToMatrix());
-                Debug2.Log($"characterId: {characterId}, scaleX:{scaleX}, scaleY:{scaleY}, rotation:{rotation}, skewX:{skewX}, skewY:{skewY}");
+                var (scaleX, scaleY, skewX, skewY, tx, ty, rotation) = MatrixUtil.DecomposeFlashMatrix(matrix.ToMatrix());
+                Debug2.Log($"characterId: {characterId}, scaleX:{scaleX}, scaleY:{scaleY}, skewX:{skewX}, skewY:{skewY}, tx:{tx}, ty:{ty}, rotation:{rotation}");
             }
             if (placeFlagHasCharacter) {
                 //Debug2.Log("placeObject2Tag.characterId:" + characterId);
