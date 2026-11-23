@@ -31,16 +31,16 @@ namespace SwfParserRuntime {
 
         public static (float scaleX, float scaleY, float skewX, float skewY, float tx, float ty, float rotation) DecomposeFlashMatrix(SwfParserRuntime.Matrix m) {
             float sx = Mathf.Sqrt(m.a * m.a + m.b * m.b);
-            float psi = Mathf.Atan2(m.b, m.a);
-            if (sx != 0 && Mathf.Abs(psi) > Mathf.PI / 2) {
+            float ky = Mathf.Atan2(m.b, m.a);
+            if (sx != 0 && Mathf.Abs(ky) > Mathf.PI / 2) {
                 sx = -sx;
-                psi += psi > 0 ? -Mathf.PI : Mathf.PI;
+                ky += ky > 0 ? -Mathf.PI : Mathf.PI;
             }
 
             float sy = Mathf.Sqrt(m.c * m.c + m.d * m.d);
-            float phi = Mathf.Atan2(-m.c, m.d);
+            float kx = Mathf.Atan2(-m.c, m.d);
             float det = m.a * m.d - m.b * m.c;
-            float cosDiff = Mathf.Cos(psi - phi);
+            float cosDiff = Mathf.Cos(ky - kx);
             if (sx != 0 && cosDiff != 0) {
                 sy = det / (sx * cosDiff);
             }
@@ -48,8 +48,8 @@ namespace SwfParserRuntime {
             return (
                 scaleX: sx,
                 scaleY: sy,
-                skewX: phi * 180 / Mathf.PI,
-                skewY: psi * 180 / Mathf.PI,
+                skewX: kx * 180 / Mathf.PI,
+                skewY: ky * 180 / Mathf.PI,
                 tx: m.tx,
                 ty: m.ty,
                 rotation: Mathf.Atan2(m.b, m.a) * 180 / Mathf.PI
