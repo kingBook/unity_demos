@@ -20,8 +20,8 @@ namespace SwfParserRuntime {
             transform.Translate(new Vector3(matrix.tx, -matrix.ty, 0.0f), Space.Self);
 
 
-            var (scaleX, scaleY, rotation, skewX, skewY) = Decompose(matrix);
-            Debug.Log($"scaleX:{scaleX}, scaleY:{scaleY}, rotation:{rotation}, skewX:{skewX}, skewY:{skewY}");
+            var (scaleX, scaleY, skewX, skewY, tx, ty, rotation) = DecomposeFlashMatrix(matrix);
+            Debug.Log($"scaleX:{scaleX}, scaleY:{scaleY}, skewX:{skewX}, skewY:{skewY}, tx:{tx}, ty:{ty}, rotation:{rotation}");
 
         }
 
@@ -29,17 +29,30 @@ namespace SwfParserRuntime {
 
         }
 
-        public static (float scaleX, float scaleY, float rotation, float skewX, float skewY) Decompose(SwfParserRuntime.Matrix m) {
-            float sx = Mathf.Sqrt(m.a * m.a + m.c * m.c);
-            float sy = Mathf.Sqrt(m.b * m.b + m.d * m.d);
-            float rot = Mathf.Atan2(m.c, m.a);
-            float skewX = Mathf.Atan2(m.d, m.b) - rot;
-            float skewY = Mathf.Atan2(m.c, m.a) - rot;
+        public static (float scaleX, float scaleY, float skewX, float skewY, float tx, float ty, float rotation) DecomposeFlashMatrix(SwfParserRuntime.Matrix m) {
+            float sx = Mathf.Sqrt(m.a * m.a + m.b * m.b);
+            float psi = Mathf.Atan2(m.b, m.a);
+            if (sx != 0 && Mathf.Abs(psi) > Mathf.PI / 2) {
+                sx = -sx;
+                psi += psi > 0 ? -Mathf.PI : Mathf.PI;
+            }
+
+            float sy = Mathf.Sqrt(m.c * m.c + m.d * m.d);
+            float phi = Mathf.Atan2(-m.c, m.d);
+            float det = m.a * m.d - m.b * m.c;
+            float cosDiff = Mathf.Cos(psi - phi);
+            if (sx != 0 && cosDiff != 0) {
+                sy = det / (sx * cosDiff);
+            }
+
             return (
-                scaleX: sx, scaleY: sy,
-                rotation: rot * 180 / Mathf.PI,
-                skewX: skewX * 180 / Mathf.PI,
-                skewY: skewY * 180 / Mathf.PI
+                scaleX: sx,
+                scaleY: sy,
+                skewX: phi * 180 / Mathf.PI,
+                skewY: psi * 180 / Mathf.PI,
+                tx: m.tx,
+                ty: m.ty,
+                rotation: Mathf.Atan2(m.b, m.a) * 180 / Mathf.PI
             );
         }
     }

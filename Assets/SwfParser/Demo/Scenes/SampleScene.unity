@@ -523,7 +523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SwfParserRuntime.MovieClip
   m_swf: {fileID: 11400000, guid: 9439dee32bc49f14f835c8d8180bee05, type: 2}
-  m_symbolClassName: _OneFrame
+  m_symbolClassName: _OneFrame2
 --- !u!1 &2130926673
 GameObject:
   m_ObjectHideFlags: 0
