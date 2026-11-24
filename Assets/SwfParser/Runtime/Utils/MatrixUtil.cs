@@ -6,27 +6,25 @@ namespace SwfParserRuntime {
     public static class MatrixUtil {
 
         public static void TransformApplyMatrix(UnityEngine.Transform transform, SwfParserRuntime.Matrix matrix) {
-            // 应用矩阵：先缩放 → 再倾斜 → 再旋转 → 最后平移
-            // 缩放
-            //if (hasScale) {
-            transform.localScale = new Vector3(matrix.a / 20f, matrix.d / 20f, 1.0f);
-            //}
-
-            // 旋转
-            //if (hasRotate) {
-            // spriteRenderer.transform.localRotation
-            //}
-            // 平移(注意: ty 取反方向)
-            transform.Translate(new Vector3(matrix.tx, -matrix.ty, 0.0f), Space.Self);
-
+            // 应用矩阵顺序：先缩放 → [再倾斜 → 再旋转] → 最后平移
 
             var (scaleX, scaleY, skewX, skewY, tx, ty, rotation) = DecomposeFlashMatrix(matrix);
             Debug.Log($"scaleX:{scaleX}, scaleY:{scaleY}, skewX:{skewX}, skewY:{skewY}, tx:{tx}, ty:{ty}, rotation:{rotation}");
 
+            // 缩放
+            transform.localScale = new Vector3(scaleX, scaleY, 1.0f);
+
+            // 倾斜 → 旋转
+            //if (hasRotate) {
+            // spriteRenderer.transform.localRotation
+            //}
+
+            // 平移(注意 ty 取反)
+            transform.Translate(new Vector3(matrix.tx, -matrix.ty, 0.0f), Space.Self);
         }
 
         public static void RectTransformApplyMatrix(UnityEngine.RectTransform rectTransform, SwfParserRuntime.Matrix matrix) {
-
+            
         }
 
         public static (float scaleX, float scaleY, float skewX, float skewY, float tx, float ty, float rotation) DecomposeFlashMatrix(SwfParserRuntime.Matrix m) {
